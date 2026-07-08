@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Engaging Courses</title>
+  <meta name="description" content="Meet the team behind Engaging Courses Academy — Tim and Aaron, experienced trainers and course designers helping you build content that sells." />
+  <meta property="og:title" content="About | Engaging Courses" />
+  <meta property="og:description" content="Meet Tim and Aaron — the instructors behind Engaging Courses Academy." />
+  <meta property="og:url" content="https://engagingcourses.com/about.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://engagingcourses.com/about.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Engaging Courses",
+    "url": "https://engagingcourses.com/about.html",
+    "description": "Meet the instructors behind Engaging Courses Academy."
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dusty:      #C79A8B;
+      --gor:        #B6A68B;
+      --isabelline: #F5F2ED;
+      --olive:      #3E3E3E;
+      --white:      #FFFFFF;
+      --gray:       #E1DFDF;
+      --font-head:  -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --font-body:  'Inter', sans-serif;
+      --max-width:  1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 0 1.5rem; }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { height: 28px; mix-blend-mode: multiply; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--dusty); }
+    .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; }
+    .nav-links a.nav-cta:hover { background: var(--gor); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
+
+    /* Page header */
+    .page-header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.75rem; }
+    .page-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--olive); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .page-intro { max-width: 580px; margin: 0 auto; color: var(--gor); font-size: 1.05rem; line-height: 1.8; }
+
+    /* Team section */
+    .team { padding: 3rem 1.5rem 5rem; max-width: var(--max-width); margin: 0 auto; display: flex; flex-direction: column; gap: 4rem; }
+
+    .team-member { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: center; background: var(--white); border-radius: 4px; padding: 3rem; }
+    .team-member.reverse { grid-template-columns: 1fr 280px; }
+    .team-member.reverse .member-image { order: 2; }
+    .team-member.reverse .member-text { order: 1; }
+
+    .member-image { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .member-image img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; mix-blend-mode: multiply; background: var(--isabelline); border: 3px solid var(--gray); }
+    .member-image .member-name-badge { font-family: var(--font-head); font-size: 1.3rem; font-weight: 700; color: var(--olive); text-align: center; }
+    .member-image .member-title { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dusty); text-align: center; }
+
+    .member-text h3 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--olive); margin-bottom: 1rem; }
+    .member-text p { font-size: 1rem; line-height: 1.8; color: var(--olive); margin-bottom: 1rem; }
+    .member-text p:last-child { margin-bottom: 0; }
+    .member-divider { width: 40px; height: 2px; background: var(--dusty); margin-bottom: 1.25rem; }
+
+    /* Mission strip */
+    .mission { background: var(--white); border-top: 1px solid var(--gray); border-bottom: 1px solid var(--gray); padding: 4rem 1.5rem; text-align: center; }
+    .mission-inner { max-width: 680px; margin: 0 auto; }
+    .mission h2 { font-family: var(--font-head); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 700; color: var(--olive); margin-bottom: 1rem; }
+    .mission p { font-size: 1.05rem; color: var(--gor); line-height: 1.8; margin-bottom: 1.5rem; }
+    .btn-primary { display: inline-block; background: var(--dusty); color: var(--white); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 2rem; border-radius: 2px; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--gor); }
+
+    /* Footer */
+    footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand img { height: 28px; mix-blend-mode: multiply; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--gor); line-height: 1.6; }
+    .footer-links h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive); margin-bottom: 1rem; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 0.88rem; color: var(--gor); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--dusty); }
+    .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-toggle { display: flex; }
+      .team-member { grid-template-columns: 1fr; padding: 2rem 1.25rem; gap: 2rem; text-align: center; }
+      .team-member.reverse { grid-template-columns: 1fr; }
+      .team-member.reverse .member-image { order: 0; }
+      .team-member.reverse .member-text { order: 1; }
+      .member-divider { margin: 0 auto 1.25rem; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/"><img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" class="nav-logo" /></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+        <li><a href="/freebies.html">Freebies</a></li>
+        <li><a href="https://blog.engagingcourses.com" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <p class="section-eyebrow">The team</p>
+    <h1 class="page-title">We've been in the room.</h1>
+    <p class="page-intro">Decades of real-world training experience — from enterprise software to fashion, from curricula to video — distilled into skills you can use today.</p>
+  </div>
+
+  <div class="team">
+
+    <!-- Tim -->
+    <div class="team-member">
+      <div class="member-image">
+        <img src="assets/images/Tim-avatar.png" alt="Tim — course instructor and co-founder" />
+        <p class="member-name-badge">Tim</p>
+        <p class="member-title">Co-Founder &amp; Instructor</p>
+      </div>
+      <div class="member-text">
+        <div class="member-divider"></div>
+        <p>Tim has 15 years experience creating complex software training for various tech companies.</p>
+      </div>
+    </div>
+
+    <!-- Aaron -->
+    <div class="team-member reverse">
+      <div class="member-image">
+        <img src="assets/images/Aaron-avatar.png" alt="Aaron — course instructor and co-founder" />
+        <p class="member-name-badge">Aaron</p>
+        <p class="member-title">Co-Founder &amp; Instructor</p>
+      </div>
+      <div class="member-text">
+        <div class="member-divider"></div>
+        <p>Aaron has 20 years experience creating technical and corporate training, from curricula to videos to websites, for various tech and fashion companies.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mission">
+    <div class="mission-inner">
+      <p class="section-eyebrow">Our mission</p>
+      <h2>Great content shouldn't stay hidden.</h2>
+      <p>We started Engaging Courses Academy because we kept seeing the same problem — knowledgeable people creating courses that weren't connecting. The content was good. The delivery wasn't. We're here to fix that.</p>
+      <a href="https://www.skool.com/engaging-courses-academy-1697/" class="btn-primary" target="_blank" rel="noopener">Join the Academy</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" />
+        <p>Teaching course creators the skills to build content that engages — and sells.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+          <li><a href="/freebies.html">Freebies</a></li>
+          <li><a href="https://blog.engagingcourses.com" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Skool Community</a></li>
+          <li><a href="mailto:info@engagingcourses.com">info@engagingcourses.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 engagingcourses.com — All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freebies | Engaging Courses</title>
+  <meta name="description" content="Free resources from Engaging Courses Academy — guides, templates, and tools to help you build better online courses." />
+  <meta property="og:title" content="Freebies | Engaging Courses" />
+  <meta property="og:description" content="Free downloadable resources for online course creators from Engaging Courses Academy." />
+  <meta property="og:url" content="https://engagingcourses.com/freebies.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://engagingcourses.com/freebies.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Free Resources | Engaging Courses",
+    "url": "https://engagingcourses.com/freebies.html",
+    "description": "Free downloadable guides and templates for online course creators."
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dusty:      #C79A8B;
+      --gor:        #B6A68B;
+      --isabelline: #F5F2ED;
+      --olive:      #3E3E3E;
+      --white:      #FFFFFF;
+      --gray:       #E1DFDF;
+      --font-head:  -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --font-body:  'Inter', sans-serif;
+      --max-width:  1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 0 1.5rem; }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { height: 28px; mix-blend-mode: multiply; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--dusty); }
+    .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; }
+    .nav-links a.nav-cta:hover { background: var(--gor); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
+
+    /* Page header */
+    .page-header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.75rem; }
+    .page-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--olive); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .page-intro { max-width: 540px; margin: 0 auto; color: var(--gor); font-size: 1.05rem; line-height: 1.8; }
+
+    /* Freebies grid */
+    .freebies-wrap { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .freebies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .freebie-card {
+      background: var(--white);
+      border-radius: 4px;
+      border: 1px solid var(--gray);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .freebie-card:hover { border-color: var(--dusty); }
+
+    .freebie-card.coming-soon { opacity: 0.6; }
+    .freebie-card.coming-soon:hover { border-color: var(--gray); }
+
+    .freebie-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2px;
+      align-self: flex-start;
+    }
+
+    .badge-free { background: #EAF3DE; color: #3B6D11; }
+    .badge-soon { background: var(--gray); color: var(--gor); }
+
+    .freebie-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .freebie-card h3 {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--olive);
+      line-height: 1.35;
+    }
+
+    .freebie-card p {
+      font-size: 0.88rem;
+      color: #666;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .freebie-card .btn-download {
+      display: inline-block;
+      background: var(--dusty);
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.65rem 1.25rem;
+      border-radius: 2px;
+      transition: background 0.2s;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .freebie-card .btn-download:hover { background: var(--gor); }
+
+    .freebie-card .btn-soon {
+      display: inline-block;
+      border: 1px solid var(--gray);
+      color: var(--gor);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.65rem 1.25rem;
+      border-radius: 2px;
+      text-align: center;
+      margin-top: 0.5rem;
+      cursor: default;
+    }
+
+    /* Email nudge */
+    .email-nudge {
+      background: var(--white);
+      border-top: 3px solid var(--dusty);
+      border-radius: 4px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .email-nudge h2 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--olive); margin-bottom: 0.5rem; }
+    .email-nudge p { font-size: 0.92rem; color: var(--gor); margin-bottom: 1.5rem; }
+    .nudge-form { display: flex; gap: 0.75rem; max-width: 420px; margin: 0 auto; }
+    .nudge-form input { flex: 1; font-family: var(--font-body); font-size: 0.92rem; padding: 0.75rem 1rem; border: 1px solid var(--gray); border-radius: 2px; background: var(--isabelline); color: var(--olive); outline: none; transition: border-color 0.2s; }
+    .nudge-form input:focus { border-color: var(--dusty); }
+    .nudge-form input::placeholder { color: #aaa; }
+    .nudge-form button { background: var(--dusty); color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.75rem 1.25rem; border: none; border-radius: 2px; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .nudge-form button:hover { background: var(--gor); }
+
+    /* Footer */
+    footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand img { height: 28px; mix-blend-mode: multiply; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--gor); line-height: 1.6; }
+    .footer-links h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive); margin-bottom: 1rem; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 0.88rem; color: var(--gor); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--dusty); }
+    .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-toggle { display: flex; }
+      .freebies-grid { grid-template-columns: 1fr; }
+      .nudge-form { flex-direction: column; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+
+    @media (min-width: 769px) and (max-width: 900px) {
+      .freebies-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/"><img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" class="nav-logo" /></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+        <li><a href="/freebies.html">Freebies</a></li>
+        <li><a href="https://blog.engagingcourses.com" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <p class="section-eyebrow">Free resources</p>
+    <h1 class="page-title">Tools to help you build better courses.</h1>
+    <p class="page-intro">Everything here is free — no strings attached. Download what helps, share with someone who needs it, and come back often as we add more.</p>
+  </div>
+
+  <div class="freebies-wrap">
+    <div class="freebies-grid">
+
+      <!-- Placeholder 1 -->
+      <div class="freebie-card coming-soon">
+        <span class="freebie-badge badge-soon">Coming soon</span>
+        <div class="freebie-icon">📋</div>
+        <h3>Course Engagement Checklist</h3>
+        <p>A practical checklist to audit your existing course content for the most common engagement killers — and what to do about each one.</p>
+        <span class="btn-soon">Coming soon</span>
+      </div>
+
+      <!-- Placeholder 2 -->
+      <div class="freebie-card coming-soon">
+        <span class="freebie-badge badge-soon">Coming soon</span>
+        <div class="freebie-icon">🎬</div>
+        <h3>The 25-Second Video Formula</h3>
+        <p>Our framework for creating short-form course content that holds attention, drives completion, and actually teaches something in under 30 seconds.</p>
+        <span class="btn-soon">Coming soon</span>
+      </div>
+
+      <!-- Placeholder 3 -->
+      <div class="freebie-card coming-soon">
+        <span class="freebie-badge badge-soon">Coming soon</span>
+        <div class="freebie-icon">🗂️</div>
+        <h3>Module Structure Template</h3>
+        <p>A fillable template for planning your course modules with built-in engagement checkpoints — so learners stay interested from intro to finale.</p>
+        <span class="btn-soon">Coming soon</span>
+      </div>
+
+    </div>
+
+    <!-- Email nudge -->
+    <div class="email-nudge">
+      <h2>Get notified when new resources drop.</h2>
+      <p>We're adding freebies regularly. Drop your email and we'll let you know first.</p>
+      <div class="nudge-form">
+        <input type="email" placeholder="Your email address" />
+        <button type="submit">Notify me</button>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" />
+        <p>Teaching course creators the skills to build content that engages — and sells.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+          <li><a href="/freebies.html">Freebies</a></li>
+          <li><a href="https://blog.engagingcourses.com" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Skool Community</a></li>
+          <li><a href="mailto:info@engagingcourses.com">info@engagingcourses.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 engagingcourses.com — All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
