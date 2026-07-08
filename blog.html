@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Coming Soon | Engaging Courses</title>
+  <meta name="description" content="The Engaging Courses blog is coming soon — insights, tips, and strategies for online course creators." />
+  <meta property="og:title" content="Blog Coming Soon | Engaging Courses" />
+  <meta property="og:description" content="The Engaging Courses blog is on its way. Sign up to be notified when we launch." />
+  <meta property="og:url" content="https://engagingcourses.com/blog.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://engagingcourses.com/blog.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dusty:      #C79A8B;
+      --gor:        #B6A68B;
+      --isabelline: #F5F2ED;
+      --olive:      #3E3E3E;
+      --white:      #FFFFFF;
+      --gray:       #E1DFDF;
+      --font-head:  -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --font-body:  'Inter', sans-serif;
+      --max-width:  1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 0 1.5rem; }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { height: 28px; mix-blend-mode: multiply; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--dusty); }
+    .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; }
+    .nav-links a.nav-cta:hover { background: var(--gor); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
+
+    /* Coming soon body */
+    .coming-soon-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .coming-soon-card {
+      background: var(--white);
+      border-radius: 4px;
+      border-top: 3px solid var(--dusty);
+      padding: 3.5rem 3rem;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .coming-soon-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
+
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dusty);
+      margin-bottom: 0.75rem;
+    }
+
+    .coming-soon-card h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--olive);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .coming-soon-card p {
+      font-size: 1rem;
+      color: var(--gor);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--gray);
+      margin: 0 auto 2rem;
+    }
+
+    /* Preview topics */
+    .topic-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .topic-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: var(--olive);
+      padding: 0.5rem 0.75rem;
+      background: var(--isabelline);
+      border-radius: 2px;
+    }
+
+    .topic-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--dusty);
+      flex-shrink: 0;
+      margin-top: 0.45rem;
+    }
+
+    /* Email form */
+    .notify-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .notify-form input {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      padding: 0.85rem 1.1rem;
+      border: 1px solid var(--gray);
+      border-radius: 2px;
+      background: var(--isabelline);
+      color: var(--olive);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .notify-form input:focus { border-color: var(--dusty); }
+    .notify-form input::placeholder { color: #aaa; }
+
+    .notify-form button {
+      background: var(--dusty);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+
+    .notify-form button:hover { background: var(--gor); }
+    .form-note { font-size: 0.75rem; color: var(--gor); margin-top: 0.25rem; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gor);
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--dusty); }
+
+    /* Footer */
+    footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand img { height: 28px; mix-blend-mode: multiply; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--gor); line-height: 1.6; }
+    .footer-links h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive); margin-bottom: 1rem; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-links a { font-size: 0.88rem; color: var(--gor); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--dusty); }
+    .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-toggle { display: flex; }
+      .coming-soon-card { padding: 2.5rem 1.5rem; }
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/"><img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" class="nav-logo" /></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+        <li><a href="/freebies.html">Freebies</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="coming-soon-wrap">
+    <div class="coming-soon-card">
+      <div class="coming-soon-icon">✍️</div>
+      <p class="section-eyebrow">Coming soon</p>
+      <h1>The blog is on its way.</h1>
+      <p>We're putting together practical, no-fluff content for course creators who want to build better — and sell more. Drop your email and we'll notify you the moment we launch.</p>
+
+      <div class="divider"></div>
+
+      <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--olive); margin-bottom:1rem;">Topics we'll be covering</p>
+      <ul class="topic-list">
+        <li><span class="topic-dot"></span>Why most online courses lose learners by module two</li>
+        <li><span class="topic-dot"></span>Short-form video as a teaching tool — what actually works</li>
+        <li><span class="topic-dot"></span>How to structure a course module for maximum completion</li>
+        <li><span class="topic-dot"></span>Animation and illustrated storytelling in course design</li>
+      </ul>
+
+      <div class="notify-form">
+        <input type="email" placeholder="Your email address" />
+        <button type="submit">Notify me when we launch</button>
+        <p class="form-note">No spam. Unsubscribe any time.</p>
+      </div>
+
+      <a href="/" class="back-link">← Back to home</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" />
+        <p>Teaching course creators the skills to build content that engages — and sells.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+          <li><a href="/freebies.html">Freebies</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Skool Community</a></li>
+          <li><a href="mailto:info@engagingcourses.com">info@engagingcourses.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 engagingcourses.com — All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
