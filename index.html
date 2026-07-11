@@ -166,23 +166,23 @@
     .countdown-bar {
       background: var(--dusty);
       color: var(--white);
-      text-align: center;
       padding: 0.75rem 1.5rem;
       font-family: var(--font-body);
       font-size: 0.88rem;
       font-weight: 600;
       letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
-    .countdown-bar .countdown-label {
-      margin-bottom: 0.35rem;
+    .countdown-center {
+      text-align: center;
+      flex: 1;
     }
 
-    .countdown-bar .countdown-label a {
-      color: var(--white);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
+    .countdown-label { margin-bottom: 0.35rem; }
 
     .countdown-units {
       display: inline-flex;
@@ -221,6 +221,78 @@
       opacity: 0.6;
       margin-top: -4px;
     }
+
+    /* Sign Up buttons */
+    .signup-btn {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 30px;
+      padding: 0.6rem 1.5rem;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .signup-btn:hover { opacity: 0.85; }
+
+    .signup-btn-desktop {
+      background: var(--isabelline);
+      color: var(--olive);
+      display: inline-block;
+    }
+
+    .signup-btn-mobile {
+      background: var(--olive);
+      color: var(--white);
+      display: none;
+      width: 100%;
+      margin-top: 0.75rem;
+      border-radius: 30px;
+    }
+
+    /* Sign Up modal */
+    .signup-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(62,62,62,0.55);
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .signup-modal-overlay.open { display: flex; }
+
+    .signup-modal-box {
+      background: var(--white);
+      border-radius: 6px;
+      padding: 2.5rem 2rem;
+      max-width: 420px;
+      width: 100%;
+      position: relative;
+      box-shadow: 0 16px 48px rgba(62,62,62,0.2);
+    }
+
+    .signup-modal-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--gor);
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.25rem;
+    }
+
+    .signup-modal-close:hover { color: var(--olive); }
 
     /* ── Hero ── */
     .hero {
@@ -294,7 +366,7 @@
 
     .strip-label { text-align: center; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gor); margin-bottom: 1.5rem; }
 
-    .scroll-track { display: flex; gap: 2rem; animation: scroll-left 28s linear infinite; width: max-content; }
+    .scroll-track { display: flex; gap: 2rem; animation: scroll-left 60s linear infinite; width: max-content; }
     .scroll-track:hover { animation-play-state: paused; }
     .scroll-track img { height: 220px; width: auto; mix-blend-mode: multiply; border-radius: 2px; flex-shrink: 0; }
 
@@ -529,8 +601,11 @@
       .nav-links li:last-child { border-bottom: none; }
       .nav-toggle { display: flex; }
       .contact-dropdown { right: -1.5rem; width: 290px; }
+      .countdown-bar { flex-direction: column; text-align: center; padding: 0.75rem 1rem; }
       .countdown-units { gap: 0.75rem; }
       .countdown-unit .num { font-size: 1.2rem; }
+      .signup-btn-desktop { display: none; }
+      .signup-btn-mobile { display: block; }
       .hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.25rem; }
       .hero-text { text-align: center; }
       .hero-video { order: -1; }
@@ -605,15 +680,31 @@
 
   <!-- ── Countdown bar ── -->
   <div class="countdown-bar" role="timer" aria-live="polite">
-    <div class="countdown-label">Join us live — Sunday August 2 at 11am ET</div>
-    <div class="countdown-units">
-      <div class="countdown-unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="num" id="cd-hours">--</span><span class="lbl">Hours</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="num" id="cd-mins">--</span><span class="lbl">Mins</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="num" id="cd-secs">--</span><span class="lbl">Secs</span></div>
+    <button class="signup-btn signup-btn-desktop" onclick="openSignupModal()">Sign Up</button>
+    <div class="countdown-center">
+      <div class="countdown-label">Join us live — Sunday August 2 at 11am ET</div>
+      <div class="countdown-units">
+        <div class="countdown-unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-hours">--</span><span class="lbl">Hours</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-mins">--</span><span class="lbl">Mins</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-secs">--</span><span class="lbl">Secs</span></div>
+      </div>
+    </div>
+    <button class="signup-btn signup-btn-desktop" onclick="openSignupModal()">Sign Up</button>
+    <button class="signup-btn signup-btn-mobile" onclick="openSignupModal()">Sign Up</button>
+  </div>
+
+  <!-- ── Sign Up Modal ── -->
+  <div class="signup-modal-overlay" id="signup-modal" onclick="closeSignupModal(event)">
+    <div class="signup-modal-box">
+      <button class="signup-modal-close" onclick="closeSignupModal()" aria-label="Close">&times;</button>
+      <p class="section-eyebrow" style="text-align:center;">Stay in the loop</p>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Join us live on August 2.</h2>
+      <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Drop your email and we'll send you the details plus free resources.</p>
+      <div class="ml-embedded" data-form="TM3AOT"></div>
     </div>
   </div>
 
@@ -621,7 +712,7 @@
   <section class="hero" aria-label="Hero">
     <div class="hero-text">
       <h1>Engaging <span>Courses</span></h1>
-      <h2>Learn skills to create courses that sell.</h2>
+      <h2>Learn skills to create courses which transform the lives of your learners.</h2>
       <a href="https://www.skool.com/engaging-courses-academy-1697/" class="btn-primary" target="_blank" rel="noopener">Join the Academy</a>
     </div>
     <div class="hero-video">
@@ -644,11 +735,27 @@
     <div style="overflow:hidden;">
       <div class="scroll-track">
         <img src="assets/images/aaron-tim-chef.png" alt="Course instructors illustrated characters" />
-        <img src="assets/images/chef-empty-kitchen(16x9).png" alt="Chef character in kitchen scene" />
+        <img src="assets/images/chef-empty-kitchen-16x9.png" alt="Chef character in kitchen scene" />
+        <img src="assets/images/chef-cpo.jpg" alt="Chef character portrait" />
+        <img src="assets/images/bar-chef-tablet.png" alt="Chef character with tablet" />
+        <img src="assets/images/chef-heather-stirring-mixture.png" alt="Chef character stirring" />
+        <img src="assets/images/chef-site-headline-good.png" alt="Course headline illustration" />
+        <img src="assets/images/jenna-joe-holding-hands.jpg" alt="Course characters illustrated" />
+        <img src="assets/images/Joe-sploshing-onto-canvas_project.png" alt="Illustrated character splashing paint" />
+        <img src="assets/images/robot-centered-bored-room.png" alt="Robot character in boardroom" />
+        <img src="assets/images/zhao-paris-bistro.jpg" alt="Paris bistro illustrated scene" />
+        <img src="assets/images/zoom-screen.png" alt="Zoom screen course illustration" />
         <img src="assets/images/aaron-tim-chef.png" alt="Course instructors illustrated characters" />
-        <img src="assets/images/chef-empty-kitchen(16x9).png" alt="Chef character in kitchen scene" />
-        <img src="assets/images/aaron-tim-chef.png" alt="Course instructors illustrated characters" />
-        <img src="assets/images/chef-empty-kitchen(16x9).png" alt="Chef character in kitchen scene" />
+        <img src="assets/images/chef-empty-kitchen-16x9.png" alt="Chef character in kitchen scene" />
+        <img src="assets/images/chef-cpo.jpg" alt="Chef character portrait" />
+        <img src="assets/images/bar-chef-tablet.png" alt="Chef character with tablet" />
+        <img src="assets/images/chef-heather-stirring-mixture.png" alt="Chef character stirring" />
+        <img src="assets/images/chef-site-headline-good.png" alt="Course headline illustration" />
+        <img src="assets/images/jenna-joe-holding-hands.jpg" alt="Course characters illustrated" />
+        <img src="assets/images/Joe-sploshing-onto-canvas_project.png" alt="Illustrated character splashing paint" />
+        <img src="assets/images/robot-centered-bored-room.png" alt="Robot character in boardroom" />
+        <img src="assets/images/zhao-paris-bistro.jpg" alt="Paris bistro illustrated scene" />
+        <img src="assets/images/zoom-screen.png" alt="Zoom screen course illustration" />
       </div>
     </div>
   </div>
@@ -817,6 +924,22 @@
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+    // ── Sign Up modal ──
+    function openSignupModal() {
+      document.getElementById('signup-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSignupModal(e) {
+      if (e && e.target !== document.getElementById('signup-modal') && !e.currentTarget.classList.contains('signup-modal-close')) return;
+      document.getElementById('signup-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSignupModal({target: document.getElementById('signup-modal')});
+    });
 
     // ── Formspree AJAX submission ──
     document.addEventListener('submit', async function(e) {
