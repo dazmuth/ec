@@ -18,6 +18,16 @@
     "url": "https://engagingcourses.com/contact.html"
   }
   </script>
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2504099');
+  </script>
+  <!-- End MailerLite Universal -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -121,6 +131,44 @@
     .footer-links a:hover { color: var(--dusty); }
     .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
 
+    /* MailerLite overrides */
+    .ml-embedded { width: 100%; }
+    .ml-embedded .ml-form-embedBody { background: transparent !important; padding: 0 !important; }
+    .ml-embedded .ml-form-embedContent { display: none !important; }
+    .ml-embedded input[type="text"],
+    .ml-embedded input[type="email"],
+    .ml-embedded input[type="tel"] {
+      font-family: var(--font-body) !important;
+      font-size: 0.95rem !important;
+      padding: 0.85rem 1.1rem !important;
+      border: 1px solid var(--gray) !important;
+      border-radius: 2px !important;
+      background: var(--white) !important;
+      color: var(--olive) !important;
+      width: 100% !important;
+      margin-bottom: 0.75rem !important;
+      box-shadow: none !important;
+    }
+    .ml-embedded input:focus { border-color: var(--dusty) !important; outline: none !important; }
+    .ml-embedded button[type="submit"],
+    .ml-embedded .ml-form-embedSubmit button {
+      font-family: var(--font-body) !important;
+      font-weight: 600 !important;
+      font-size: 0.9rem !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      background: var(--dusty) !important;
+      color: var(--white) !important;
+      border: none !important;
+      border-radius: 2px !important;
+      padding: 0.85rem 2rem !important;
+      width: 100% !important;
+      cursor: pointer !important;
+      transition: background 0.2s !important;
+    }
+    .ml-embedded button[type="submit"]:hover { background: var(--gor) !important; }
+    .ml-embedded .ml-form-successBody { background: transparent !important; text-align: center !important; color: var(--olive) !important; font-family: var(--font-body) !important; }
+
     /* Mobile */
     @media (max-width: 768px) {
       .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
@@ -163,14 +211,14 @@
     <!-- Form -->
     <div class="contact-form-section">
       <h2>Send us a message</h2>
-      <div class="contact-form">
-        <input type="text" placeholder="First name" name="first_name" autocomplete="given-name" />
-        <input type="email" placeholder="Email address" name="email" autocomplete="email" required />
-        <input type="tel" placeholder="Phone (optional)" name="phone" autocomplete="tel" />
-        <textarea placeholder="Your message" name="message"></textarea>
+      <form class="contact-form fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <input type="tel" name="phone" placeholder="Phone (optional)" />
+        <textarea name="message" placeholder="Your message" required></textarea>
         <button type="submit">Send message</button>
-        <p class="form-note">We typically respond within one business day.</p>
-      </div>
+        <p class="form-note" id="fs-success" style="display:none;color:var(--dusty);">Thanks! We'll be in touch within one business day.</p>
+      </form>
     </div>
 
     <!-- Info -->
@@ -233,5 +281,34 @@
     </div>
   </footer>
 
+  <script>
+    document.addEventListener('submit', async function(e) {
+      if (!e.target.classList.contains('fs-form')) return;
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const success = form.querySelector('#fs-success');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          success.style.display = 'block';
+          btn.textContent = 'Sent ✓';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>

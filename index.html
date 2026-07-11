@@ -445,6 +445,43 @@
 
     .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
 
+    /* ── Formspree contact form ── */
+    .fs-form { display: flex; flex-direction: column; gap: 0.6rem; }
+    .fs-form input,
+    .fs-form textarea {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--gray);
+      border-radius: 2px;
+      background: var(--isabelline);
+      color: var(--olive);
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .fs-form input:focus,
+    .fs-form textarea:focus { border-color: var(--dusty); }
+    .fs-form input::placeholder,
+    .fs-form textarea::placeholder { color: #aaa; }
+    .fs-form textarea { min-height: 90px; resize: vertical; }
+    .fs-form button {
+      background: var(--dusty);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.7rem 1.25rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+    .fs-form button:hover { background: var(--gor); }
+
     /* ── MailerLite overrides ── */
     .ml-embedded { width: 100%; }
     .ml-embedded .ml-form-embedBody { background: transparent !important; padding: 0 !important; }
@@ -552,7 +589,14 @@
           <a class="nav-cta" onclick="toggleContact(event)" href="#" role="button" aria-expanded="false" aria-controls="contact-dropdown">Contact</a>
           <div class="contact-dropdown" id="contact-dropdown">
             <h3>Ask us anything</h3>
-            <div class="ml-embedded" data-form="V8INNU"></div>
+            <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <input type="tel" name="phone" placeholder="Phone (optional)" />
+              <textarea name="message" placeholder="Your message" required></textarea>
+              <button type="submit">Send message</button>
+              <p class="fs-note" id="fs-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
+            </form>
           </div>
         </li>
       </ul>
@@ -773,6 +817,35 @@
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+    // ── Formspree AJAX submission ──
+    document.addEventListener('submit', async function(e) {
+      if (!e.target.classList.contains('fs-form')) return;
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const success = form.querySelector('#fs-success');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          success.style.display = 'block';
+          btn.textContent = 'Sent ✓';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
 
     // ── Contact dropdown ──
     function toggleContact(e) {
