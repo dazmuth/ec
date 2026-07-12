@@ -676,7 +676,7 @@
               <input type="text" name="name" placeholder="Your name" required />
               <input type="email" name="email" placeholder="Email address" required />
               <input type="tel" name="phone" placeholder="Phone (optional)" />
-              <textarea name="message" required>I want to see a demo of Engaging Courses content</textarea>
+              <textarea name="message" id="demo-message" placeholder="I want to see a demo of Engaging Courses content" required></textarea>
               <button type="submit">Send request</button>
               <p class="fs-note" id="fs-demo-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
             </form>
@@ -971,7 +971,7 @@
       e.preventDefault();
       const form = e.target;
       const btn = form.querySelector('button[type="submit"]');
-      const success = form.querySelector('#fs-success');
+      const success = form.querySelector('.fs-note');
       btn.textContent = 'Sending...';
       btn.disabled = true;
       try {
@@ -982,7 +982,7 @@
         });
         if (res.ok) {
           form.reset();
-          success.style.display = 'block';
+          if (success) success.style.display = 'block';
           btn.textContent = 'Sent ✓';
         } else {
           btn.textContent = 'Error — try again';
@@ -1015,6 +1015,10 @@
       contactDropdown.classList.remove('open');
       dropdown.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', !isOpen);
+      if (!isOpen) {
+        const ta = document.getElementById('demo-message');
+        if (ta && !ta.value) ta.value = 'I want to see a demo of Engaging Courses content';
+      }
     }
 
     // Close dropdowns when clicking outside
