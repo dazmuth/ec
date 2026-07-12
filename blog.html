@@ -3,189 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Coming Soon | Engaging Courses</title>
-  <meta name="description" content="The Engaging Courses blog is coming soon — insights, tips, and strategies for online course creators." />
-  <meta property="og:title" content="Blog Coming Soon | Engaging Courses" />
-  <meta property="og:description" content="The Engaging Courses blog is on its way. Sign up to be notified when we launch." />
+  <title>Blog | Engaging Courses</title>
+  <meta name="description" content="Insights, strategies, and practical guidance for online course creators who want to build outcome-driven content that transforms learners." />
+  <meta property="og:title" content="Blog | Engaging Courses" />
+  <meta property="og:description" content="Practical insights for course creators who want to build content that actually transforms learners." />
   <meta property="og:url" content="https://engagingcourses.com/blog.html" />
-  <meta property="og:type" content="website" />
   <link rel="canonical" href="https://engagingcourses.com/blog.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Engaging Courses Blog",
+    "url": "https://engagingcourses.com/blog.html",
+    "description": "Insights and strategies for outcome-driven course creators."
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --dusty:      #C79A8B;
-      --gor:        #B6A68B;
-      --isabelline: #F5F2ED;
-      --olive:      #3E3E3E;
-      --white:      #FFFFFF;
-      --gray:       #E1DFDF;
-      --font-head:  -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-      --font-body:  'Inter', sans-serif;
-      --max-width:  1100px;
+      --dusty: #C79A8B; --gor: #B6A68B; --isabelline: #F5F2ED;
+      --olive: #3E3E3E; --white: #FFFFFF; --gray: #E1DFDF;
+      --font-head: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --font-body: 'Inter', sans-serif; --max-width: 1100px;
     }
     html { scroll-behavior: smooth; }
-    body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+    body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
-
-    /* Nav */
     nav { position: sticky; top: 0; z-index: 100; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 0 1.5rem; }
     .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { height: 28px; mix-blend-mode: multiply; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
+    .nav-links a { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
     .nav-links a:hover { color: var(--dusty); }
     .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; }
-    .nav-links a.nav-cta:hover { background: var(--gor); }
     .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
 
-    /* Coming soon body */
-    .coming-soon-wrap {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 4rem 1.5rem;
-    }
+    /* Page header */
+    .page-header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.75rem; }
+    .page-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--olive); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .page-intro { max-width: 560px; margin: 0 auto; color: var(--gor); font-size: 1.05rem; line-height: 1.8; }
 
-    .coming-soon-card {
+    /* Featured post */
+    .blog-wrap { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+
+    .featured-post {
       background: var(--white);
       border-radius: 4px;
       border-top: 3px solid var(--dusty);
-      padding: 3.5rem 3rem;
-      max-width: 560px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .coming-soon-icon {
-      font-size: 3rem;
-      margin-bottom: 1.5rem;
-      line-height: 1;
-    }
-
-    .section-eyebrow {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--dusty);
-      margin-bottom: 0.75rem;
-    }
-
-    .coming-soon-card h1 {
-      font-family: var(--font-head);
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700;
-      color: var(--olive);
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .coming-soon-card p {
-      font-size: 1rem;
-      color: var(--gor);
-      line-height: 1.8;
+      padding: 2.5rem;
       margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
     }
 
-    .divider {
-      width: 40px;
-      height: 2px;
-      background: var(--gray);
-      margin: 0 auto 2rem;
-    }
+    .featured-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.5rem; }
+    .featured-post h2 { font-family: var(--font-head); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: var(--olive); line-height: 1.25; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .featured-post p { font-size: 0.95rem; color: #666; line-height: 1.7; margin-bottom: 1.25rem; }
+    .post-meta { font-size: 0.78rem; color: var(--gor); margin-bottom: 1rem; }
+    .btn-read { display: inline-block; background: var(--dusty); color: var(--white); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.65rem 1.25rem; border-radius: 2px; transition: background 0.2s; }
+    .btn-read:hover { background: var(--gor); }
+    .featured-badge { background: var(--dusty); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 2px; white-space: nowrap; align-self: flex-start; }
 
-    /* Preview topics */
-    .topic-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      text-align: left;
-    }
+    /* Post grid */
+    .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 
-    .topic-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.92rem;
-      color: var(--olive);
-      padding: 0.5rem 0.75rem;
-      background: var(--isabelline);
-      border-radius: 2px;
-    }
+    .post-card { background: var(--white); border-radius: 4px; padding: 1.75rem; border-top: 2px solid var(--gray); transition: border-color 0.2s; }
+    .post-card:hover { border-color: var(--dusty); }
+    .post-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.5rem; }
+    .post-card h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--olive); line-height: 1.35; margin-bottom: 0.6rem; }
+    .post-card p { font-size: 0.88rem; color: #666; line-height: 1.65; margin-bottom: 1rem; flex: 1; }
+    .post-date { font-size: 0.75rem; color: var(--gor); margin-bottom: 0.75rem; }
+    .read-more { font-size: 0.82rem; font-weight: 600; color: var(--dusty); letter-spacing: 0.04em; text-transform: uppercase; display: inline-block; transition: color 0.2s; }
+    .read-more:hover { color: var(--gor); }
 
-    .topic-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--dusty);
-      flex-shrink: 0;
-      margin-top: 0.45rem;
-    }
-
-    /* Email form */
-    .notify-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .notify-form input {
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      padding: 0.85rem 1.1rem;
-      border: 1px solid var(--gray);
-      border-radius: 2px;
-      background: var(--isabelline);
-      color: var(--olive);
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-
-    .notify-form input:focus { border-color: var(--dusty); }
-    .notify-form input::placeholder { color: #aaa; }
-
-    .notify-form button {
-      background: var(--dusty);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.85rem 2rem;
-      border: none;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: background 0.2s;
-      width: 100%;
-    }
-
-    .notify-form button:hover { background: var(--gor); }
-    .form-note { font-size: 0.75rem; color: var(--gor); margin-top: 0.25rem; }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gor);
-      letter-spacing: 0.04em;
-      transition: color 0.2s;
-    }
-
-    .back-link:hover { color: var(--dusty); }
-
-    /* Footer */
     footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
     .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
     .footer-brand img { height: 28px; mix-blend-mode: multiply; margin-bottom: 0.75rem; }
@@ -196,20 +94,23 @@
     .footer-links a:hover { color: var(--dusty); }
     .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
 
-    /* Mobile */
     @media (max-width: 768px) {
       .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
       .nav-links.open { display: flex; }
       .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
       .nav-links li:last-child { border-bottom: none; }
       .nav-toggle { display: flex; }
-      .coming-soon-card { padding: 2.5rem 1.5rem; }
+      .featured-post { grid-template-columns: 1fr; }
+      .post-grid { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
+    }
+
+    @media (min-width: 769px) and (max-width: 900px) {
+      .post-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <div class="nav-inner">
       <a href="/"><img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" class="nav-logo" /></a>
@@ -227,30 +128,53 @@
     </div>
   </nav>
 
-  <div class="coming-soon-wrap">
-    <div class="coming-soon-card">
-      <div class="coming-soon-icon">✍️</div>
-      <p class="section-eyebrow">Coming soon</p>
-      <h1>The blog is on its way.</h1>
-      <p>We're putting together practical, no-fluff content for course creators who want to build better — and sell more. Drop your email and we'll notify you the moment we launch.</p>
+  <div class="page-header">
+    <p class="section-eyebrow">The Engaging Courses Blog</p>
+    <h1 class="page-title">Insights for course creators.</h1>
+    <p class="page-intro">Practical thinking on outcome-driven design, illustrated storytelling, and building courses that actually transform the people who take them.</p>
+  </div>
 
-      <div class="divider"></div>
+  <div class="blog-wrap">
 
-      <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--olive); margin-bottom:1rem;">Topics we'll be covering</p>
-      <ul class="topic-list">
-        <li><span class="topic-dot"></span>Why most online courses lose learners by module two</li>
-        <li><span class="topic-dot"></span>Short-form video as a teaching tool — what actually works</li>
-        <li><span class="topic-dot"></span>How to structure a course module for maximum completion</li>
-        <li><span class="topic-dot"></span>Animation and illustrated storytelling in course design</li>
-      </ul>
+    <!-- Featured post -->
+    <div class="featured-post">
+      <div>
+        <p class="featured-label">Live Event</p>
+        <h2>Join Us Live August 2: A Free Session on Building Courses That Transform</h2>
+        <p class="post-date">July 2025</p>
+        <p>We're going live to show you exactly what outcome-driven course design looks like in practice — and give you a framework you can apply to your own content immediately. Free to attend.</p>
+        <a href="/blog/join-us-live-august-2.html" class="btn-read">Read more & sign up</a>
+      </div>
+      <span class="featured-badge">Featured</span>
+    </div>
 
-      <div class="notify-form">
-        <input type="email" placeholder="Your email address" />
-        <button type="submit">Notify me when we launch</button>
-        <p class="form-note">No spam. Unsubscribe any time.</p>
+    <!-- Post grid -->
+    <div class="post-grid">
+
+      <div class="post-card">
+        <p class="post-tag">Course Design</p>
+        <h3>Why Your Online Course Isn't Selling — And It Has Nothing to Do With Your Content</h3>
+        <p class="post-date">July 2025</p>
+        <p>You know your subject. You've put in the hours. So why aren't learners buying — or finishing — what you've built? The answer is probably not what you think.</p>
+        <a href="/blog/why-your-course-isnt-selling.html" class="read-more">Read more →</a>
       </div>
 
-      <a href="/" class="back-link">← Back to home</a>
+      <div class="post-card">
+        <p class="post-tag">Instructional Design</p>
+        <h3>The Difference Between Teaching Information and Transforming Learners</h3>
+        <p class="post-date">July 2025</p>
+        <p>Most courses inform. The best courses transform. Here's what separates them — and why it matters more than anything else you'll do as a course creator.</p>
+        <a href="/blog/teaching-information-vs-transforming-learners.html" class="read-more">Read more →</a>
+      </div>
+
+      <div class="post-card">
+        <p class="post-tag">Content Strategy</p>
+        <h3>Why We Use Illustrated Storytelling to Teach Course Design — And Why It Works</h3>
+        <p class="post-date">July 2025</p>
+        <p>Our hand-drawn animated characters aren't a stylistic quirk. They're a deliberate pedagogical choice — and one every course creator should understand.</p>
+        <a href="/blog/illustrated-storytelling-in-course-design.html" class="read-more">Read more →</a>
+      </div>
+
     </div>
   </div>
 
@@ -258,7 +182,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" />
-        <p>Teaching course creators the skills to build content that engages — and sells.</p>
+        <p>Teaching course creators the skills to build outcome-driven content that transforms learners — and sells.</p>
       </div>
       <div class="footer-links">
         <h4>Navigate</h4>
@@ -275,14 +199,11 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Skool Community</a></li>
-          <li><a href="mailto:info@engagingcourses.com">info@engagingcourses.com</a></li>
+          <li><a href="mailto:mail@engagingcourses.com">mail@engagingcourses.com</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 engagingcourses.com — All rights reserved.</p>
-    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Engaging Courses — All rights reserved.</p></div>
   </footer>
-
 </body>
 </html>
