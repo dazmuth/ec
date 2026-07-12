@@ -131,7 +131,15 @@
 
     .nav-links a.nav-cta:hover { background: var(--gor); }
 
-    /* Contact dropdown */
+    .nav-links a.nav-demo-btn {
+      background: var(--gor);
+      color: var(--white);
+      padding: 0.4rem 1rem;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .nav-links a.nav-demo-btn:hover { background: var(--dusty); }
     .nav-contact-wrap { position: relative; }
 
     .contact-dropdown {
@@ -660,7 +668,21 @@
         <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
         <li><a href="/freebies.html">Freebies</a></li>
         <li><a href="/blog.html">Blog</a></li>
-        <li class="nav-contact-wrap">
+        <li class="nav-contact-wrap" id="demo-nav-wrap">
+          <a class="nav-demo-btn" onclick="toggleDemo(event)" href="#" role="button" aria-expanded="false" aria-controls="demo-dropdown">Request Demo</a>
+          <div class="contact-dropdown" id="demo-dropdown">
+            <h3>Request a demo</h3>
+            <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <input type="tel" name="phone" placeholder="Phone (optional)" />
+              <textarea name="message" required>I want to see a demo of Engaging Courses content</textarea>
+              <button type="submit">Send request</button>
+              <p class="fs-note" id="fs-demo-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </li>
+        <li class="nav-contact-wrap" id="contact-nav-wrap">
           <a class="nav-cta" onclick="toggleContact(event)" href="#" role="button" aria-expanded="false" aria-controls="contact-dropdown">Contact</a>
           <div class="contact-dropdown" id="contact-dropdown">
             <h3>Ask us anything</h3>
@@ -734,28 +756,30 @@
     <p class="strip-label">Image examples from Courseware</p>
     <div style="overflow:hidden;">
       <div class="scroll-track">
-        <img src="assets/images/aaron-tim-chef.png" alt="Course instructors illustrated characters" />
-        <img src="assets/images/chef-empty-kitchen-16x9.png" alt="Chef character in kitchen scene" />
-        <img src="assets/images/bar-chef-tablet.png" alt="Chef character with tablet" />
-        <img src="assets/images/zhao-paris-bistro.jpg" alt="Paris bistro illustrated scene" />
-        <img src="assets/images/chef-cpo.jpg" alt="Chef character portrait" />
-        <img src="assets/images/chef-heather-stirring-mixture.png" alt="Chef character stirring" />
-        <img src="assets/images/chef-site-headline-good.png" alt="Course headline illustration" />
-        <img src="assets/images/jenna-joe-holding-hands.jpg" alt="Course characters illustrated" />
-        <img src="assets/images/Joe-sploshing-onto-canvas_project.png" alt="Illustrated character splashing paint" />
-        <img src="assets/images/robot-centered-bored-room.png" alt="Robot character in boardroom" />
-        <img src="assets/images/zoom-screen.png" alt="Zoom screen course illustration" />
-        <img src="assets/images/aaron-tim-chef.png" alt="Course instructors illustrated characters" />
-        <img src="assets/images/chef-empty-kitchen-16x9.png" alt="Chef character in kitchen scene" />
-        <img src="assets/images/bar-chef-tablet.png" alt="Chef character with tablet" />
-        <img src="assets/images/zhao-paris-bistro.jpg" alt="Paris bistro illustrated scene" />
-        <img src="assets/images/chef-cpo.jpg" alt="Chef character portrait" />
-        <img src="assets/images/chef-heather-stirring-mixture.png" alt="Chef character stirring" />
-        <img src="assets/images/chef-site-headline-good.png" alt="Course headline illustration" />
-        <img src="assets/images/jenna-joe-holding-hands.jpg" alt="Course characters illustrated" />
-        <img src="assets/images/Joe-sploshing-onto-canvas_project.png" alt="Illustrated character splashing paint" />
-        <img src="assets/images/robot-centered-bored-room.png" alt="Robot character in boardroom" />
-        <img src="assets/images/zoom-screen.png" alt="Zoom screen course illustration" />
+        <img src="assets/images/carousel/Joe-sploshing-onto-canvas-project.png" alt="Illustrated character splashing paint" />
+        <img src="assets/images/carousel/bar-chef-tablet.png" alt="Chef character with tablet" />
+        <img src="assets/images/carousel/chef-big-storyboard.png" alt="Chef character with storyboard" />
+        <img src="assets/images/carousel/chef-cpo.jpg" alt="Chef character portrait" />
+        <img src="assets/images/carousel/chef-heather-stirring-mixture.png" alt="Chef character stirring" />
+        <img src="assets/images/carousel/chef-kitchen-script-storyboard-floating.png" alt="Chef kitchen script storyboard" />
+        <img src="assets/images/carousel/chef-pointing-3-milestones.png" alt="Chef pointing at milestones" />
+        <img src="assets/images/carousel/chef-site-headline-good.png" alt="Course headline illustration" />
+        <img src="assets/images/carousel/jenna-joe-holding-hands.jpg" alt="Course characters illustrated" />
+        <img src="assets/images/carousel/robot-centered-bored-room.png" alt="Robot character in boardroom" />
+        <img src="assets/images/carousel/zhao-paris-bistro.jpg" alt="Paris bistro illustrated scene" />
+        <img src="assets/images/carousel/zoom-screen.png" alt="Zoom screen course illustration" />
+        <img src="assets/images/carousel/Joe-sploshing-onto-canvas-project.png" alt="Illustrated character splashing paint" />
+        <img src="assets/images/carousel/bar-chef-tablet.png" alt="Chef character with tablet" />
+        <img src="assets/images/carousel/chef-big-storyboard.png" alt="Chef character with storyboard" />
+        <img src="assets/images/carousel/chef-cpo.jpg" alt="Chef character portrait" />
+        <img src="assets/images/carousel/chef-heather-stirring-mixture.png" alt="Chef character stirring" />
+        <img src="assets/images/carousel/chef-kitchen-script-storyboard-floating.png" alt="Chef kitchen script storyboard" />
+        <img src="assets/images/carousel/chef-pointing-3-milestones.png" alt="Chef pointing at milestones" />
+        <img src="assets/images/carousel/chef-site-headline-good.png" alt="Course headline illustration" />
+        <img src="assets/images/carousel/jenna-joe-holding-hands.jpg" alt="Course characters illustrated" />
+        <img src="assets/images/carousel/robot-centered-bored-room.png" alt="Robot character in boardroom" />
+        <img src="assets/images/carousel/zhao-paris-bistro.jpg" alt="Paris bistro illustrated scene" />
+        <img src="assets/images/carousel/zoom-screen.png" alt="Zoom screen course illustration" />
       </div>
     </div>
   </div>
@@ -974,18 +998,34 @@
     function toggleContact(e) {
       e.preventDefault();
       const dropdown = document.getElementById('contact-dropdown');
+      const demoDropdown = document.getElementById('demo-dropdown');
       const btn = e.currentTarget;
       const isOpen = dropdown.classList.contains('open');
-      dropdown.classList.toggle('open');
+      demoDropdown.classList.remove('open');
+      dropdown.classList.toggle('open', !isOpen);
       btn.setAttribute('aria-expanded', !isOpen);
     }
 
-    // Close dropdown when clicking outside
+    function toggleDemo(e) {
+      e.preventDefault();
+      const dropdown = document.getElementById('demo-dropdown');
+      const contactDropdown = document.getElementById('contact-dropdown');
+      const btn = e.currentTarget;
+      const isOpen = dropdown.classList.contains('open');
+      contactDropdown.classList.remove('open');
+      dropdown.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    // Close dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-      const wrap = document.querySelector('.nav-contact-wrap');
-      if (wrap && !wrap.contains(e.target)) {
+      const contactWrap = document.getElementById('contact-nav-wrap');
+      const demoWrap = document.getElementById('demo-nav-wrap');
+      if (contactWrap && !contactWrap.contains(e.target)) {
         document.getElementById('contact-dropdown').classList.remove('open');
-        document.querySelector('.nav-contact-wrap .nav-cta').setAttribute('aria-expanded', 'false');
+      }
+      if (demoWrap && !demoWrap.contains(e.target)) {
+        document.getElementById('demo-dropdown').classList.remove('open');
       }
     });
   </script>
