@@ -19,7 +19,7 @@
     "url": "https://engagingcourses.com/blog/illustrated-storytelling-in-course-design.html",
     "author": { "@type": "Organization", "name": "Engaging Courses" },
     "publisher": { "@type": "Organization", "name": "Engaging Courses", "url": "https://engagingcourses.com" },
-    "datePublished": "2025-07-15"
+    "datePublished": "2026-07-01"
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,15 +37,37 @@
     body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     img { max-width: 100%; display: block; }
     a { color: inherit; text-decoration: none; }
+    /* Social strip */
+    .social-strip { background: var(--olive); padding: 0.45rem 1.5rem; display: flex; justify-content: flex-end; align-items: center; gap: 1.25rem; }
+    .social-strip a { display: flex; align-items: center; justify-content: center; color: var(--gray); transition: color 0.2s; width: 20px; height: 20px; }
+    .social-strip a:hover { color: var(--dusty); }
+    .social-strip svg { width: 16px; height: 16px; fill: currentColor; }
+
     nav { position: sticky; top: 0; z-index: 100; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 0 1.5rem; }
     .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-logo { height: 28px; mix-blend-mode: multiply; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
     .nav-links a { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
     .nav-links a:hover { color: var(--dusty); }
-    .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; }
+    .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; cursor: pointer; }
+    .nav-links a.nav-cta:hover { background: var(--gor); }
+    .nav-links a.nav-demo-btn { background: var(--gor); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; cursor: pointer; }
+    .nav-links a.nav-demo-btn:hover { background: var(--dusty); }
+    .nav-contact-wrap { position: relative; }
+    .contact-dropdown { display: none; position: absolute; top: calc(100% + 12px); right: 0; width: 320px; background: var(--white); border: 1px solid var(--gray); border-radius: 4px; padding: 1.5rem; box-shadow: 0 8px 32px rgba(62,62,62,0.12); z-index: 200; }
+    .contact-dropdown.open { display: block; }
+    .contact-dropdown h3 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; color: var(--olive); margin-bottom: 1rem; }
     .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
+
+    /* Formspree dropdown forms */
+    .fs-form { display: flex; flex-direction: column; gap: 0.6rem; }
+    .fs-form input, .fs-form textarea { font-family: var(--font-body); font-size: 0.88rem; padding: 0.65rem 0.85rem; border: 1px solid var(--gray); border-radius: 2px; background: var(--isabelline); color: var(--olive); outline: none; transition: border-color 0.2s; width: 100%; }
+    .fs-form input:focus, .fs-form textarea:focus { border-color: var(--dusty); }
+    .fs-form input::placeholder, .fs-form textarea::placeholder { color: #aaa; }
+    .fs-form textarea { min-height: 90px; resize: vertical; }
+    .fs-form button { background: var(--dusty); color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.7rem 1.25rem; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s; width: 100%; }
+    .fs-form button:hover { background: var(--gor); }
     .article-wrap { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
     .article-meta { margin-bottom: 2.5rem; }
     .article-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dusty); display: block; margin-bottom: 0.75rem; }
@@ -70,25 +92,45 @@
     .back-link { display: inline-block; font-size: 0.85rem; font-weight: 600; color: var(--gor); margin-bottom: 2rem; letter-spacing: 0.04em; transition: color 0.2s; }
     .back-link:hover { color: var(--dusty); }
     footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
-    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
-    .footer-brand img { height: 28px; mix-blend-mode: multiply; margin-bottom: 0.75rem; }
+    .footer-inner { max-width: 480px; margin: 0 auto 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.25rem; }
+    .footer-brand img { height: 28px; mix-blend-mode: multiply; margin: 0 auto 0.75rem; }
     .footer-brand p { font-size: 0.85rem; color: var(--gor); line-height: 1.6; }
-    .footer-links h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive); margin-bottom: 1rem; }
-    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-    .footer-links a { font-size: 0.88rem; color: var(--gor); transition: color 0.2s; }
-    .footer-links a:hover { color: var(--dusty); }
+    .footer-social { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .footer-social a { color: var(--gor); transition: color 0.2s; }
+    .footer-social a:hover { color: var(--dusty); }
+    .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
     .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
     @media (max-width: 768px) {
+      .social-strip { justify-content: center; }
       .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
       .nav-links.open { display: flex; }
       .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
       .nav-links li:last-child { border-bottom: none; }
       .nav-toggle { display: flex; }
-      .footer-inner { grid-template-columns: 1fr; }
+      .contact-dropdown { right: -1.5rem; width: 290px; }
     }
   </style>
 </head>
 <body>
+  <!-- Social strip -->
+  <div class="social-strip" aria-label="Social media links">
+    <a href="https://www.instagram.com/engaging.courses/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@EngagingCourses" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/1JozYGqpBR/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.x.com/engagingcourses/" target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@engagingcourses" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+    </a>
+  </div>
+
   <nav>
     <div class="nav-inner">
       <a href="/"><img src="../assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" class="nav-logo" /></a>
@@ -101,7 +143,34 @@
         <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
         <li><a href="/freebies.html">Freebies</a></li>
         <li><a href="/blog.html">Blog</a></li>
-        <li><a href="/contact.html" class="nav-cta">Contact</a></li>
+        <li class="nav-contact-wrap" id="demo-nav-wrap">
+          <a class="nav-demo-btn" onclick="toggleDemo(event)" href="#" role="button" aria-expanded="false" aria-controls="demo-dropdown">Request Demo</a>
+          <div class="contact-dropdown" id="demo-dropdown">
+            <h3>Request a demo</h3>
+            <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <input type="tel" name="phone" placeholder="Phone (optional)" />
+              <textarea name="message" id="demo-message" placeholder="I want to see a demo of Engaging Courses content" required></textarea>
+              <button type="submit">Send request</button>
+              <p class="fs-note" id="fs-demo-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </li>
+        <li class="nav-contact-wrap" id="contact-nav-wrap">
+          <a class="nav-cta" onclick="toggleContact(event)" href="#" role="button" aria-expanded="false" aria-controls="contact-dropdown">Contact</a>
+          <div class="contact-dropdown" id="contact-dropdown">
+            <h3>Ask us anything</h3>
+            <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <input type="tel" name="phone" placeholder="Phone (optional)" />
+              <textarea name="message" placeholder="Your message" required></textarea>
+              <button type="submit">Send message</button>
+              <p class="fs-note" id="fs-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
@@ -112,7 +181,7 @@
       <span class="article-tag">Content Strategy</span>
       <h1 class="article-title">Why We Use Illustrated Storytelling to Teach Course Design — And Why It Works</h1>
       <p class="article-subtitle">Our hand-drawn animated characters aren't a stylistic quirk. They're a deliberate pedagogical choice — and one we think every course creator should understand.</p>
-      <p class="article-byline">By Engaging Courses &nbsp;·&nbsp; July 2025</p>
+      <p class="article-byline">By Engaging Courses &nbsp;·&nbsp; July 2026</p>
     </div>
 
     <div class="article-divider"></div>
@@ -192,27 +261,86 @@
       <div class="footer-brand">
         <img src="../assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" />
         <p>Teaching course creators the skills to build outcome-driven content that transforms learners — and sells.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
-          <li><a href="/freebies.html">Freebies</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-links">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Skool Community</a></li>
-          <li><a href="mailto:mail@engagingcourses.com">mail@engagingcourses.com</a></li>
-        </ul>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/engaging.courses/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.youtube.com/@EngagingCourses" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="https://www.facebook.com/1JozYGqpBR/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.x.com/engagingcourses/" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+          <a href="https://www.tiktok.com/@engagingcourses" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2025 Engaging Courses — All rights reserved.</p></div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Engaging Courses — All rights reserved.</p>
+    </div>
   </footer>
+  <script>
+    // Formspree AJAX submission (shared by all fs-form forms on this page)
+    document.addEventListener('submit', async function(e) {
+      if (!e.target.classList.contains('fs-form')) return;
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const success = form.querySelector('.fs-note');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          if (success) success.style.display = 'block';
+          btn.textContent = 'Sent ✓';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
+
+    // Nav dropdowns
+    function toggleContact(e) {
+      e.preventDefault();
+      const dropdown = document.getElementById('contact-dropdown');
+      const demoDropdown = document.getElementById('demo-dropdown');
+      const btn = e.currentTarget;
+      const isOpen = dropdown.classList.contains('open');
+      demoDropdown.classList.remove('open');
+      dropdown.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    function toggleDemo(e) {
+      e.preventDefault();
+      const dropdown = document.getElementById('demo-dropdown');
+      const contactDropdown = document.getElementById('contact-dropdown');
+      const btn = e.currentTarget;
+      const isOpen = dropdown.classList.contains('open');
+      contactDropdown.classList.remove('open');
+      dropdown.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+      if (!isOpen) {
+        const ta = document.getElementById('demo-message');
+        if (ta && !ta.value) ta.value = 'I want to see a demo of Engaging Courses content';
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      const contactWrap = document.getElementById('contact-nav-wrap');
+      const demoWrap = document.getElementById('demo-nav-wrap');
+      if (contactWrap && !contactWrap.contains(e.target)) {
+        document.getElementById('contact-dropdown').classList.remove('open');
+      }
+      if (demoWrap && !demoWrap.contains(e.target)) {
+        document.getElementById('demo-dropdown').classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
