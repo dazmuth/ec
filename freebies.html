@@ -81,7 +81,7 @@
 
     /* Freebies grid */
     .freebies-wrap { max-width: var(--max-width); margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-    .freebies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .freebies-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
 
     .freebie-card {
       background: var(--white);
@@ -165,26 +165,7 @@
       margin-top: 0.5rem;
       cursor: default;
     }
-
-    /* Email nudge */
-    .email-nudge {
-      background: var(--white);
-      border-top: 3px solid var(--dusty);
-      border-radius: 4px;
-      padding: 2.5rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .email-nudge h2 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 700; color: var(--olive); margin-bottom: 0.5rem; }
-    .email-nudge p { font-size: 0.92rem; color: var(--gor); margin-bottom: 1.5rem; }
-    .nudge-form { display: flex; gap: 0.75rem; max-width: 420px; margin: 0 auto; }
-    .nudge-form input { flex: 1; font-family: var(--font-body); font-size: 0.92rem; padding: 0.75rem 1rem; border: 1px solid var(--gray); border-radius: 2px; background: var(--isabelline); color: var(--olive); outline: none; transition: border-color 0.2s; }
-    .nudge-form input:focus { border-color: var(--dusty); }
-    .nudge-form input::placeholder { color: #aaa; }
-    .nudge-form button { background: var(--dusty); color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.75rem 1.25rem; border: none; border-radius: 2px; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
-    .nudge-form button:hover { background: var(--gor); }
-
+    
     /* Footer */
     footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
     .footer-inner { max-width: 480px; margin: 0 auto 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.25rem; }
@@ -206,12 +187,8 @@
       .nav-toggle { display: flex; }
       .contact-dropdown { right: -1.5rem; width: 290px; }
       .freebies-grid { grid-template-columns: 1fr; }
-      .nudge-form { flex-direction: column; }
     }
 
-    @media (min-width: 769px) and (max-width: 900px) {
-      .freebies-grid { grid-template-columns: repeat(2, 1fr); }
-    }
   </style>
 </head>
 <body>
@@ -288,43 +265,22 @@
   <div class="freebies-wrap">
     <div class="freebies-grid">
 
-      <!-- Placeholder 1 -->
-      <div class="freebie-card coming-soon">
-        <span class="freebie-badge badge-soon">Coming soon</span>
-        <div class="freebie-icon">📋</div>
-        <h3>Course Engagement Checklist</h3>
-        <p>A practical checklist to audit your existing course content for the most common engagement killers — and what to do about each one.</p>
-        <span class="btn-soon">Coming soon</span>
+      <div class="freebie-card">
+        <span class="freebie-badge badge-free">Free</span>
+        <div class="freebie-icon">📊</div>
+        <h3>Course Engagement Scorecard</h3>
+        <p>Most course creators know something isn't working, but don't know where to look. This scorecard gives you a concrete starting point: nine scored indicators across three of the eight domains of course design, each with a clear 0-1-2 rubric so you can evaluate your own course in under 20 minutes. Walk away knowing exactly which design areas are strong, which are costing you completions, and what to fix first.</p>
+        <a href="assets/freebies/Course-Engagement-Scorecard.pdf" class="btn-download" target="_blank" rel="noopener">Download PDF</a>
       </div>
 
-      <!-- Placeholder 2 -->
-      <div class="freebie-card coming-soon">
-        <span class="freebie-badge badge-soon">Coming soon</span>
-        <div class="freebie-icon">🎬</div>
-        <h3>The 25-Second Video Formula</h3>
-        <p>Our framework for creating short-form course content that holds attention, drives completion, and actually teaches something in under 30 seconds.</p>
-        <span class="btn-soon">Coming soon</span>
+      <div class="freebie-card">
+        <span class="freebie-badge badge-free">Free</span>
+        <div class="freebie-icon">🔍</div>
+        <h3>The Dropout Autopsy</h3>
+        <p>If your learners are leaving your course before the end, this five-question diagnostic tells you why. Each question targets a specific structural failure that causes drop-off, and every answer, whether yes or no, comes with a plain-language explanation of what it reveals about your course's design. By the time you finish, you will have a clear picture of where your course is losing people and which domain to address first.</p>
+        <a href="assets/freebies/Dropout-Autopsy.pdf" class="btn-download" target="_blank" rel="noopener">Download PDF</a>
       </div>
 
-      <!-- Placeholder 3 -->
-      <div class="freebie-card coming-soon">
-        <span class="freebie-badge badge-soon">Coming soon</span>
-        <div class="freebie-icon">🗂️</div>
-        <h3>Module Structure Template</h3>
-        <p>A fillable template for planning your course modules with built-in engagement checkpoints — so learners stay interested from intro to finale.</p>
-        <span class="btn-soon">Coming soon</span>
-      </div>
-
-    </div>
-
-    <!-- Email nudge -->
-    <div class="email-nudge">
-      <h2>Get notified when new resources drop.</h2>
-      <p>We're adding freebies regularly. Drop your email and we'll let you know first.</p>
-      <div class="nudge-form">
-        <input type="email" placeholder="Your email address" />
-        <button type="submit">Notify me</button>
-      </div>
     </div>
 
   </div>
