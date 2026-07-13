@@ -19,6 +19,17 @@
     "description": "Free downloadable guides and templates for online course creators."
   }
   </script>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2504099');
+  </script>
+  <!-- End MailerLite Universal -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -72,6 +83,79 @@
     .fs-form textarea { min-height: 90px; resize: vertical; }
     .fs-form button { background: var(--dusty); color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.7rem 1.25rem; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s; width: 100%; }
     .fs-form button:hover { background: var(--gor); }
+
+    /* Countdown */
+    .countdown-bar {
+      background: var(--dusty);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .countdown-center { text-align: center; flex: 1; }
+    .countdown-label { margin-bottom: 0.35rem; }
+    .countdown-units { display: inline-flex; gap: 1.25rem; align-items: center; justify-content: center; }
+    .countdown-unit { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
+    .countdown-unit .num { font-size: 1.5rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; min-width: 2ch; text-align: center; }
+    .countdown-unit .lbl { font-size: 0.62rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
+    .countdown-sep { font-size: 1.3rem; font-weight: 300; opacity: 0.6; margin-top: -4px; }
+
+    /* Sign Up buttons */
+    .signup-btn { font-family: var(--font-body); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; border: none; border-radius: 30px; padding: 0.6rem 1.5rem; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; flex-shrink: 0; }
+    .signup-btn:hover { opacity: 0.85; }
+    .signup-btn-desktop { background: var(--isabelline); color: var(--olive); display: inline-block; }
+    .signup-btn-mobile { background: var(--olive); color: var(--white); display: none; width: 100%; margin-top: 0.75rem; border-radius: 30px; }
+
+    /* Sign Up modal */
+    .signup-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(62,62,62,0.55); z-index: 500; align-items: center; justify-content: center; padding: 1.5rem; }
+    .signup-modal-overlay.open { display: flex; }
+    .signup-modal-box { background: var(--white); border-radius: 6px; padding: 2.5rem 2rem; max-width: 420px; width: 100%; position: relative; box-shadow: 0 16px 48px rgba(62,62,62,0.2); }
+    .signup-modal-close { position: absolute; top: 0.75rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: var(--gor); cursor: pointer; line-height: 1; padding: 0.25rem; }
+    .signup-modal-close:hover { color: var(--olive); }
+
+    /* MailerLite overrides */
+    .ml-embedded { width: 100%; }
+    .ml-embedded .ml-form-embedBody { background: transparent !important; padding: 0 !important; }
+    .ml-embedded .ml-form-embedContent { display: none !important; }
+    .ml-embedded input[type="text"],
+    .ml-embedded input[type="email"],
+    .ml-embedded input[type="tel"] {
+      font-family: var(--font-body) !important;
+      font-size: 0.95rem !important;
+      padding: 0.85rem 1.1rem !important;
+      border: 1px solid var(--gray) !important;
+      border-radius: 2px !important;
+      background: var(--white) !important;
+      color: var(--olive) !important;
+      width: 100% !important;
+      margin-bottom: 0.75rem !important;
+      box-shadow: none !important;
+    }
+    .ml-embedded input:focus { border-color: var(--dusty) !important; outline: none !important; }
+    .ml-embedded button[type="submit"],
+    .ml-embedded .ml-form-embedSubmit button {
+      font-family: var(--font-body) !important;
+      font-weight: 600 !important;
+      font-size: 0.9rem !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      background: var(--dusty) !important;
+      color: var(--white) !important;
+      border: none !important;
+      border-radius: 2px !important;
+      padding: 0.85rem 2rem !important;
+      width: 100% !important;
+      cursor: pointer !important;
+      transition: background 0.2s !important;
+    }
+    .ml-embedded button[type="submit"]:hover { background: var(--gor) !important; }
+    .ml-embedded .ml-form-successBody { background: transparent !important; text-align: center !important; color: var(--olive) !important; font-family: var(--font-body) !important; }
 
     /* Page header */
     .page-header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
@@ -186,6 +270,9 @@
       .nav-links li:last-child { border-bottom: none; }
       .nav-toggle { display: flex; }
       .contact-dropdown { right: -1.5rem; width: 290px; }
+      .countdown-bar { flex-direction: column; text-align: center; padding: 0.75rem 1rem; }
+      .signup-btn-desktop { display: none; }
+      .signup-btn-mobile { display: block; }
       .freebies-grid { grid-template-columns: 1fr; }
     }
 
@@ -256,6 +343,36 @@
     </div>
   </nav>
 
+  <!-- Countdown bar -->
+  <div class="countdown-bar" role="timer" aria-live="polite">
+    <button class="signup-btn signup-btn-desktop" onclick="openSignupModal()">Sign Up</button>
+    <div class="countdown-center">
+      <div class="countdown-label">Join us live — Sunday August 2 at 11am ET</div>
+      <div class="countdown-units">
+        <div class="countdown-unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-hours">--</span><span class="lbl">Hours</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-mins">--</span><span class="lbl">Mins</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-secs">--</span><span class="lbl">Secs</span></div>
+      </div>
+    </div>
+    <button class="signup-btn signup-btn-desktop" onclick="openSignupModal()">Sign Up</button>
+    <button class="signup-btn signup-btn-mobile" onclick="openSignupModal()">Sign Up</button>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="signup-modal-overlay" id="signup-modal" onclick="closeSignupModal(event)">
+    <div class="signup-modal-box">
+      <button class="signup-modal-close" onclick="closeSignupModal()" aria-label="Close">&times;</button>
+      <p class="section-eyebrow" style="text-align:center;">Stay in the loop</p>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Join us live on August 2.</h2>
+      <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Drop your email and we'll send you the details plus free resources.</p>
+      <div class="ml-embedded" data-form="TM3AOT"></div>
+    </div>
+  </div>
+
   <div class="page-header">
     <p class="section-eyebrow">Free resources</p>
     <h1 class="page-title">Tools to help you build better courses.</h1>
@@ -306,6 +423,48 @@
 
 
   <script>
+    // Countdown timer
+    const target = new Date('2026-08-02T11:00:00-04:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.querySelector('.countdown-bar').innerHTML = '<div style="font-size:1rem;font-weight:700;">We\'re live! Join us now.</div>';
+        return;
+      }
+
+      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Sign Up modal
+    function openSignupModal() {
+      document.getElementById('signup-modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSignupModal(e) {
+      if (e && e.target !== document.getElementById('signup-modal') && !e.currentTarget.classList.contains('signup-modal-close')) return;
+      document.getElementById('signup-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSignupModal({target: document.getElementById('signup-modal')});
+    });
+
     // Formspree AJAX submission (shared by all fs-form forms on this page)
     document.addEventListener('submit', async function(e) {
       if (!e.target.classList.contains('fs-form')) return;
