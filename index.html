@@ -1,3 +1,4 @@
+<!-- FILE: /index.html (site homepage) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -357,6 +358,15 @@
 
     .zoom-link-raw a { color: var(--gor); text-decoration: underline; }
     .zoom-link-raw a:hover { color: var(--dusty); }
+
+    /* Webinar freebie picker (shown after successful webinar signup) */
+    .freebie-picker { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--gray); text-align: left; }
+    .freebie-picker-title { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--olive); text-align: center; margin-bottom: 1rem; }
+    .freebie-pick-item { margin-bottom: 1.25rem; }
+    .freebie-pick-item:last-child { margin-bottom: 0; }
+    .freebie-pick-item p { font-size: 0.85rem; color: var(--olive); line-height: 1.55; margin-bottom: 0.65rem; }
+    .freebie-pick-item p strong { color: var(--olive); }
+    .freebie-pick-item .zoom-link-btn { font-size: 0.78rem; padding: 0.7rem 1rem; margin-bottom: 0; }
 
     /* ── Hero ── */
     .hero {
@@ -725,6 +735,7 @@
         <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
         <li><a href="/freebies.html">Freebies</a></li>
         <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/webinar/">Webinars</a></li>
         <li class="nav-contact-wrap" id="demo-nav-wrap">
           <a class="nav-demo-btn" onclick="toggleDemo(event)" href="#" role="button" aria-expanded="false" aria-controls="demo-dropdown">Request Demo</a>
           <div class="contact-dropdown" id="demo-dropdown">
@@ -797,7 +808,18 @@
       <p class="section-eyebrow" style="text-align:center;">Stay in the loop</p>
       <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Join us live on August 2.</h2>
       <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Drop your email and we'll send you the details plus free resources.</p>
-      <div class="ml-embedded" data-form="TM3AOT"></div>
+      <div class="ml-embedded" id="webinar-ml-embed" data-form="TM3AOT"></div>
+      <div class="freebie-picker" id="webinar-freebie-picker" style="display:none;">
+        <p class="freebie-picker-title">Pick your Freebie!</p>
+        <div class="freebie-pick-item">
+          <p><strong>1) Course Engagement Scorecard:</strong> Most course creators know something isn't working, but don't know where to look.</p>
+          <a href="https://github.com/dazmuth/ec/releases/download/freebie-course-engagement-scorecard/Course-Engagement-Scorecard.pdf" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
+        </div>
+        <div class="freebie-pick-item">
+          <p><strong>2) The Dropout Autopsy:</strong> If your learners are leaving your course before the end, this five-question diagnostic tells you why.</p>
+          <a href="https://github.com/dazmuth/ec/releases/download/freebie-dropout-autopsy/Dropout-Autopsy.pdf" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1029,8 +1051,23 @@
     function openChoiceModal() { openModal('choice-modal'); }
     function closeChoiceModal(e) { closeModal('choice-modal', e); }
 
-    function openSignupModal() { openModal('signup-modal'); }
+    function openSignupModal() {
+      openModal('signup-modal');
+      document.getElementById('webinar-freebie-picker').style.display = 'none';
+      if (webinarFreebiePollInterval) clearInterval(webinarFreebiePollInterval);
+      webinarFreebiePollInterval = setInterval(checkWebinarFreebieSuccess, 500);
+      checkWebinarFreebieSuccess();
+    }
     function closeSignupModal(e) { closeModal('signup-modal', e); }
+
+    let webinarFreebiePollInterval = null;
+    function checkWebinarFreebieSuccess() {
+      const successEl = document.querySelector('#webinar-ml-embed .ml-form-successBody');
+      if (successEl && successEl.offsetParent !== null) {
+        document.getElementById('webinar-freebie-picker').style.display = 'block';
+        clearInterval(webinarFreebiePollInterval);
+      }
+    }
 
     function openZoomModal() { openModal('zoom-modal'); }
     function closeZoomModal(e) { closeModal('zoom-modal', e); }
