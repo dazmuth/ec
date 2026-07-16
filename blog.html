@@ -107,8 +107,8 @@
     /* Sign Up modal */
     .signup-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(62,62,62,0.55); z-index: 500; align-items: center; justify-content: center; padding: 1.5rem; }
     .signup-modal-overlay.open { display: flex; }
-    .signup-modal-box { background: var(--white); border-radius: 6px; padding: 2.5rem 2rem; max-width: 420px; width: 100%; position: relative; box-shadow: 0 16px 48px rgba(62,62,62,0.2); }
-    .signup-modal-close { position: absolute; top: 0.75rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: var(--gor); cursor: pointer; line-height: 1; padding: 0.25rem; }
+    .signup-modal-box { background: var(--white); border-radius: 6px; padding: 2.5rem 2rem; max-width: 420px; width: 100%; max-height: calc(100vh - 3rem); overflow-y: auto; -webkit-overflow-scrolling: touch; position: relative; box-shadow: 0 16px 48px rgba(62,62,62,0.2); }
+    .signup-modal-close { position: sticky; top: 0; display: block; width: fit-content; margin: 0 -0.5rem -0.75rem auto; background: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; color: var(--gor); cursor: pointer; line-height: 1; padding: 0.25rem 0.5rem; z-index: 5; }
     .signup-modal-close:hover { color: var(--olive); }
 
     /* Choice modal (Webinar details vs Zoom link) */
