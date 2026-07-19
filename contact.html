@@ -70,6 +70,8 @@
     .contact-dropdown { display: none; position: absolute; top: calc(100% + 12px); right: 0; width: 320px; background: var(--white); border: 1px solid var(--gray); border-radius: 4px; padding: 1.5rem; box-shadow: 0 8px 32px rgba(62,62,62,0.12); z-index: 200; }
     .contact-dropdown.open { display: block; }
     .contact-dropdown h3 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; color: var(--olive); margin-bottom: 1rem; }
+    .contact-dropdown-close { position: sticky; top: 0; display: block; width: fit-content; margin: 0 -0.5rem -0.75rem auto; background: var(--white); border: none; border-radius: 50%; font-size: 1.3rem; color: var(--gor); cursor: pointer; line-height: 1; padding: 0.2rem 0.45rem; z-index: 5; }
+    .contact-dropdown-close:hover { color: var(--olive); }
     .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
     .contact-dropdown .fs-form { display: flex; flex-direction: column; gap: 0.6rem; }
@@ -196,7 +198,7 @@
       .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
       .nav-links li:last-child { border-bottom: none; }
       .nav-toggle { display: flex; }
-      .contact-dropdown { right: -1.5rem; width: 290px; }
+      .contact-dropdown { position: fixed; top: 50%; left: 50%; right: auto; transform: translate(-50%, -50%); width: min(320px, calc(100vw - 3rem)); max-height: calc(100vh - 3rem); overflow-y: auto; -webkit-overflow-scrolling: touch; }
       .contact-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
     }
   </style>
@@ -238,6 +240,7 @@
         <li class="nav-contact-wrap" id="demo-nav-wrap">
           <a class="nav-demo-btn" onclick="toggleDemo(event)" href="#" role="button" aria-expanded="false" aria-controls="demo-dropdown">Request Demo</a>
           <div class="contact-dropdown" id="demo-dropdown">
+            <button type="button" class="contact-dropdown-close" onclick="closeDropdown('demo-dropdown')" aria-label="Close">&times;</button>
             <h3>Request a demo</h3>
             <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
               <input type="text" name="name" placeholder="Your name" required />
@@ -252,6 +255,7 @@
         <li class="nav-contact-wrap" id="contact-nav-wrap">
           <a class="nav-cta" onclick="toggleContact(event)" href="#" role="button" aria-expanded="false" aria-controls="contact-dropdown">Contact</a>
           <div class="contact-dropdown" id="contact-dropdown">
+            <button type="button" class="contact-dropdown-close" onclick="closeDropdown('contact-dropdown')" aria-label="Close">&times;</button>
             <h3>Ask us anything</h3>
             <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
               <input type="text" name="name" placeholder="Your name" required />
@@ -368,6 +372,13 @@
     });
 
     // Nav dropdowns
+    function closeDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.classList.remove('open');
+      const trigger = document.querySelector('[aria-controls="' + id + '"]');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
+
     function toggleContact(e) {
       e.preventDefault();
       const dropdown = document.getElementById('contact-dropdown');
