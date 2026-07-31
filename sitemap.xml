@@ -6,17 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://engagingcourses.com/about.html</loc>
+    <loc>https://engagingcourses.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://engagingcourses.com/contact.html</loc>
+    <loc>https://engagingcourses.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://engagingcourses.com/freebies.html</loc>
+    <loc>https://engagingcourses.com/freebies/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -24,5 +24,25 @@
     <loc>https://engagingcourses.com/webinar/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://engagingcourses.com/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://engagingcourses.com/blog/why-your-course-isnt-selling/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://engagingcourses.com/blog/teaching-information-vs-transforming-learners/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://engagingcourses.com/blog/illustrated-storytelling-in-course-design/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
