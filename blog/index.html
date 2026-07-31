@@ -1,0 +1,607 @@
+<!-- FILE: /blog/index.html  |  URL: engagingcourses.com/blog/  |  Blog INDEX (list of posts) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Engaging Courses</title>
+  <meta name="description" content="Insights, strategies, and practical guidance for online course creators who want to build outcome-driven content that transforms learners." />
+  <meta property="og:title" content="Blog | Engaging Courses" />
+  <meta property="og:description" content="Practical insights for course creators who want to build content that actually transforms learners." />
+  <meta property="og:url" content="https://engagingcourses.com/blog/" />
+  <link rel="canonical" href="https://engagingcourses.com/blog/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Engaging Courses Blog",
+    "url": "https://engagingcourses.com/blog/",
+    "description": "Insights and strategies for outcome-driven course creators."
+  }
+  </script>
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2504099');
+  </script>
+  <!-- End MailerLite Universal -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dusty: #C79A8B; --gor: #B6A68B; --isabelline: #F5F2ED;
+      --olive: #3E3E3E; --white: #FFFFFF; --gray: #E1DFDF;
+      --font-head: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      --font-body: 'Inter', sans-serif; --max-width: 1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--isabelline); color: var(--olive); font-family: var(--font-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    /* Social strip */
+    .social-strip { background: var(--olive); padding: 0.45rem 1.5rem; display: flex; justify-content: flex-end; align-items: center; gap: 1.25rem; }
+    .social-strip a { display: flex; align-items: center; justify-content: center; color: var(--gray); transition: color 0.2s; width: 20px; height: 20px; }
+    .social-strip a:hover { color: var(--dusty); }
+    .social-strip svg { width: 16px; height: 16px; fill: currentColor; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 0 1.5rem; }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { height: 28px; mix-blend-mode: multiply; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { font-size: 0.875rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--olive); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--dusty); }
+    .nav-links a.nav-cta { background: var(--dusty); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; cursor: pointer; }
+    .nav-links a.nav-cta:hover { background: var(--gor); }
+    .nav-links a.nav-demo-btn { background: var(--gor); color: var(--white); padding: 0.4rem 1rem; border-radius: 2px; cursor: pointer; }
+    .nav-links a.nav-demo-btn:hover { background: var(--dusty); }
+    .nav-contact-wrap { position: relative; }
+    .contact-dropdown { display: none; position: absolute; top: calc(100% + 12px); right: 0; width: 320px; background: var(--white); border: 1px solid var(--gray); border-radius: 4px; padding: 1.5rem; box-shadow: 0 8px 32px rgba(62,62,62,0.12); z-index: 200; }
+    .contact-dropdown.open { display: block; }
+    .contact-dropdown h3 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 700; color: var(--olive); margin-bottom: 1rem; }
+    .contact-dropdown-close { position: sticky; top: 0; display: block; width: fit-content; margin: 0 -0.5rem -0.75rem auto; background: var(--white); border: none; border-radius: 50%; font-size: 1.3rem; color: var(--gor); cursor: pointer; line-height: 1; padding: 0.2rem 0.45rem; z-index: 5; }
+    .contact-dropdown-close:hover { color: var(--olive); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--olive); border-radius: 2px; }
+
+    /* Formspree dropdown forms */
+    .fs-form { display: flex; flex-direction: column; gap: 0.6rem; }
+    .fs-form input, .fs-form textarea { font-family: var(--font-body); font-size: 0.88rem; padding: 0.65rem 0.85rem; border: 1px solid var(--gray); border-radius: 2px; background: var(--isabelline); color: var(--olive); outline: none; transition: border-color 0.2s; width: 100%; }
+    .fs-form input:focus, .fs-form textarea:focus { border-color: var(--dusty); }
+    .fs-form input::placeholder, .fs-form textarea::placeholder { color: #aaa; }
+    .fs-form textarea { min-height: 90px; resize: vertical; }
+    .fs-form button { background: var(--dusty); color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.7rem 1.25rem; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s; width: 100%; }
+    .fs-form button:hover { background: var(--gor); }
+
+    /* Countdown */
+    .countdown-bar {
+      background: var(--dusty);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .countdown-center { text-align: center; flex: 1; }
+    .countdown-label { margin-bottom: 0.35rem; }
+    .countdown-units { display: inline-flex; gap: 1.25rem; align-items: center; justify-content: center; }
+    .countdown-unit { display: flex; flex-direction: column; align-items: center; gap: 0.1rem; }
+    .countdown-unit .num { font-size: 1.5rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; min-width: 2ch; text-align: center; }
+    .countdown-unit .lbl { font-size: 0.62rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
+    .countdown-sep { font-size: 1.3rem; font-weight: 300; opacity: 0.6; margin-top: -4px; }
+
+    /* Sign Up buttons */
+    .signup-btn { font-family: var(--font-body); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; border: none; border-radius: 30px; padding: 0.6rem 1.25rem; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; flex-shrink: 0; }
+    .signup-btn:hover { opacity: 0.85; }
+    .signup-btn-desktop { background: var(--isabelline); color: var(--olive); display: inline-block; }
+    .signup-btn-mobile { background: var(--olive); color: var(--white); display: none; width: 100%; margin-top: 0.75rem; border-radius: 30px; white-space: normal; }
+
+    /* Sign Up modal */
+    .signup-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(62,62,62,0.55); z-index: 500; align-items: center; justify-content: center; padding: 1.5rem; }
+    .signup-modal-overlay.open { display: flex; }
+    .signup-modal-box { background: var(--white); border-radius: 6px; padding: 2.5rem 2rem; max-width: 420px; width: 100%; max-height: calc(100vh - 3rem); overflow-y: auto; -webkit-overflow-scrolling: touch; position: relative; box-shadow: 0 16px 48px rgba(62,62,62,0.2); }
+    .signup-modal-close { position: sticky; top: 0; display: block; width: fit-content; margin: 0 -0.5rem -0.75rem auto; background: var(--white); border: none; border-radius: 50%; font-size: 1.5rem; color: var(--gor); cursor: pointer; line-height: 1; padding: 0.25rem 0.5rem; z-index: 5; }
+    .signup-modal-close:hover { color: var(--olive); }
+
+    /* Choice modal (Webinar details vs Zoom link) */
+    .choice-buttons { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem; }
+    .choice-btn { display: block; width: 100%; text-align: center; font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.9rem 1.25rem; border-radius: 2px; cursor: pointer; border: none; transition: background 0.2s, color 0.2s; line-height: 1.4; }
+    .choice-btn-primary { background: var(--dusty); color: var(--white); }
+    .choice-btn-primary:hover { background: var(--gor); }
+    .choice-btn-secondary { background: var(--white); color: var(--dusty); border: 1.5px solid var(--dusty); }
+    .choice-btn-secondary:hover { background: var(--dusty); color: var(--white); }
+
+    /* Zoom link modal */
+    .zoom-link-btn { display: block; text-align: center; background: var(--dusty); color: var(--white); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 1.5rem; border-radius: 2px; transition: background 0.2s; margin-bottom: 0.85rem; }
+    .zoom-link-btn:hover { background: var(--gor); }
+    .zoom-link-raw { font-size: 0.78rem; color: var(--gor); word-break: break-all; text-align: center; line-height: 1.5; }
+    .zoom-link-raw a { color: var(--gor); text-decoration: underline; }
+    .zoom-link-raw a:hover { color: var(--dusty); }
+
+    /* Webinar freebie picker (shown after successful webinar signup) */
+    .freebie-picker { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--gray); text-align: left; }
+    .freebie-picker-title { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--olive); text-align: center; margin-bottom: 1rem; }
+    .freebie-pick-item { margin-bottom: 1.25rem; }
+    .freebie-pick-item:last-child { margin-bottom: 0; }
+    .freebie-pick-item p { font-size: 0.85rem; color: var(--olive); line-height: 1.55; margin-bottom: 0.65rem; }
+    .freebie-pick-item p strong { color: var(--olive); }
+    .freebie-pick-item .zoom-link-btn { font-size: 0.78rem; padding: 0.7rem 1rem; margin-bottom: 0; }
+
+    /* MailerLite overrides */
+    .ml-embedded { width: 100%; }
+    .ml-embedded .ml-form-embedBody { background: transparent !important; padding: 0 !important; }
+    .ml-embedded .ml-form-embedContent { display: none !important; }
+    .ml-embedded input[type="text"],
+    .ml-embedded input[type="email"],
+    .ml-embedded input[type="tel"] {
+      font-family: var(--font-body) !important;
+      font-size: 0.95rem !important;
+      padding: 0.85rem 1.1rem !important;
+      border: 1px solid var(--gray) !important;
+      border-radius: 2px !important;
+      background: var(--white) !important;
+      color: var(--olive) !important;
+      width: 100% !important;
+      margin-bottom: 0.75rem !important;
+      box-shadow: none !important;
+    }
+    .ml-embedded input:focus { border-color: var(--dusty) !important; outline: none !important; }
+    .ml-embedded button[type="submit"],
+    .ml-embedded .ml-form-embedSubmit button {
+      font-family: var(--font-body) !important;
+      font-weight: 600 !important;
+      font-size: 0.9rem !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase !important;
+      background: var(--dusty) !important;
+      color: var(--white) !important;
+      border: none !important;
+      border-radius: 2px !important;
+      padding: 0.85rem 2rem !important;
+      width: 100% !important;
+      cursor: pointer !important;
+      transition: background 0.2s !important;
+    }
+    .ml-embedded button[type="submit"]:hover { background: var(--gor) !important; }
+    .ml-embedded .ml-form-successBody { background: transparent !important; text-align: center !important; color: var(--olive) !important; font-family: var(--font-body) !important; }
+
+    /* Page header */
+    .page-header { padding: 4rem 1.5rem 2rem; text-align: center; max-width: var(--max-width); margin: 0 auto; }
+    .section-eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.75rem; }
+    .page-title { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--olive); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .page-intro { max-width: 560px; margin: 0 auto; color: var(--gor); font-size: 1.05rem; line-height: 1.8; }
+
+    /* Featured post */
+    .blog-wrap { max-width: var(--max-width); margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+
+    .featured-post {
+      background: var(--white);
+      border-radius: 4px;
+      border-top: 3px solid var(--dusty);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .featured-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.5rem; }
+    .featured-post h2 { font-family: var(--font-head); font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 700; color: var(--olive); line-height: 1.25; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .featured-post p { font-size: 0.95rem; color: #666; line-height: 1.7; margin-bottom: 1.25rem; }
+    .post-meta { font-size: 0.78rem; color: var(--gor); margin-bottom: 1rem; }
+    .btn-read { display: inline-block; background: var(--dusty); color: var(--white); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.65rem 1.25rem; border-radius: 2px; transition: background 0.2s; }
+    .btn-read:hover { background: var(--gor); }
+    .featured-badge { background: var(--dusty); color: var(--white); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 2px; white-space: nowrap; align-self: flex-start; }
+
+    /* Post grid */
+    .post-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+    .post-card { background: var(--white); border-radius: 4px; padding: 1.75rem; border-top: 2px solid var(--gray); transition: border-color 0.2s; }
+    .post-card:hover { border-color: var(--dusty); }
+    .post-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dusty); margin-bottom: 0.5rem; }
+    .post-card h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--olive); line-height: 1.35; margin-bottom: 0.6rem; }
+    .post-card p { font-size: 0.88rem; color: #666; line-height: 1.65; margin-bottom: 1rem; flex: 1; }
+    .post-date { font-size: 0.75rem; color: var(--gor); margin-bottom: 0.75rem; }
+    .read-more { font-size: 0.82rem; font-weight: 600; color: var(--dusty); letter-spacing: 0.04em; text-transform: uppercase; display: inline-block; transition: color 0.2s; }
+    .read-more:hover { color: var(--gor); }
+
+    footer { background: var(--isabelline); border-top: 1px solid var(--gray); padding: 3rem 1.5rem 2rem; }
+    .footer-inner { max-width: 480px; margin: 0 auto 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.25rem; }
+    .footer-brand img { height: 28px; mix-blend-mode: multiply; margin: 0 auto 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--gor); line-height: 1.6; }
+    .footer-social { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    .footer-social a { color: var(--gor); transition: color 0.2s; }
+    .footer-social a:hover { color: var(--dusty); }
+    .footer-social svg { width: 18px; height: 18px; fill: currentColor; }
+    .footer-bottom { border-top: 1px solid var(--gray); padding-top: 1.5rem; text-align: center; font-size: 0.78rem; color: var(--gor); }
+
+    @media (max-width: 768px) {
+      .social-strip { justify-content: center; }
+      .nav-links { display: none; flex-direction: column; gap: 0; position: absolute; top: 64px; left: 0; right: 0; background: var(--isabelline); border-bottom: 1px solid var(--gray); padding: 1rem 1.5rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 0.6rem 0; border-bottom: 1px solid var(--gray); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-toggle { display: flex; }
+      .contact-dropdown { position: fixed; top: 50%; left: 50%; right: auto; transform: translate(-50%, -50%); width: min(320px, calc(100vw - 3rem)); max-height: calc(100vh - 3rem); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+      .countdown-bar { flex-direction: column; text-align: center; padding: 0.75rem 1rem; }
+      .signup-btn-desktop { display: none; }
+      .signup-btn-mobile { display: block; }
+      .featured-post { grid-template-columns: 1fr; }
+      .post-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (min-width: 769px) and (max-width: 900px) {
+      .post-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 960px) and (min-width: 769px) {
+      .countdown-bar { flex-direction: column; text-align: center; padding: 0.75rem 1rem; gap: 0.5rem; }
+      .signup-btn-desktop { display: none; }
+      .signup-btn-mobile { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Social strip -->
+  <div class="social-strip" aria-label="Social media links">
+    <a href="https://www.instagram.com/engaging.courses/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@EngagingCourses" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/1JozYGqpBR/" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://www.x.com/engagingcourses/" target="_blank" rel="noopener" aria-label="X (Twitter)">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@engagingcourses" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+    </a>
+  </div>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/"><img src="/assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" class="nav-logo" /></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="https://www.skool.com/engaging-courses-academy-1697/" target="_blank" rel="noopener">Academy</a></li>
+        <li><a href="/freebies/">Freebies</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/webinar/">Webinars</a></li>
+        <li class="nav-contact-wrap" id="demo-nav-wrap">
+          <a class="nav-demo-btn" onclick="toggleDemo(event)" href="#" role="button" aria-expanded="false" aria-controls="demo-dropdown">Request Demo</a>
+          <div class="contact-dropdown" id="demo-dropdown">
+            <button type="button" class="contact-dropdown-close" onclick="closeDropdown('demo-dropdown')" aria-label="Close">&times;</button>
+            <h3>Request a demo</h3>
+            <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <input type="tel" name="phone" placeholder="Phone (optional)" />
+              <textarea name="message" id="demo-message" placeholder="I want to see a demo of Engaging Courses content" required></textarea>
+              <button type="submit">Send request</button>
+              <p class="fs-note" id="fs-demo-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </li>
+        <li class="nav-contact-wrap" id="contact-nav-wrap">
+          <a class="nav-cta" onclick="toggleContact(event)" href="#" role="button" aria-expanded="false" aria-controls="contact-dropdown">Contact</a>
+          <div class="contact-dropdown" id="contact-dropdown">
+            <button type="button" class="contact-dropdown-close" onclick="closeDropdown('contact-dropdown')" aria-label="Close">&times;</button>
+            <h3>Ask us anything</h3>
+            <form class="fs-form" action="https://formspree.io/f/mjgnbrlj" method="POST">
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Email address" required />
+              <input type="tel" name="phone" placeholder="Phone (optional)" />
+              <textarea name="message" placeholder="Your message" required></textarea>
+              <button type="submit">Send message</button>
+              <p class="fs-note" id="fs-success" style="display:none;color:var(--dusty);font-size:0.82rem;margin-top:0.5rem;">Thanks! We'll be in touch soon.</p>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Countdown bar -->
+  <div class="countdown-bar" role="timer" aria-live="polite">
+    <button class="signup-btn signup-btn-desktop" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
+    <div class="countdown-center">
+      <div class="countdown-label">Join us live — Monday September 7 at 11am ET</div>
+      <div class="countdown-units">
+        <div class="countdown-unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-hours">--</span><span class="lbl">Hours</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-mins">--</span><span class="lbl">Mins</span></div>
+        <span class="countdown-sep">:</span>
+        <div class="countdown-unit"><span class="num" id="cd-secs">--</span><span class="lbl">Secs</span></div>
+      </div>
+    </div>
+    <button class="signup-btn signup-btn-desktop" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
+    <button class="signup-btn signup-btn-mobile" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
+  </div>
+
+  <!-- Choice Modal (Webinar details vs Zoom link) -->
+  <div class="signup-modal-overlay" id="choice-modal" onclick="closeChoiceModal(event)">
+    <div class="signup-modal-box">
+      <button class="signup-modal-close" onclick="closeChoiceModal()" aria-label="Close">&times;</button>
+      <p class="section-eyebrow" style="text-align:center;">Join us live</p>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Monday, September 7 at 11am ET</h2>
+      <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">What would you like?</p>
+      <div class="choice-buttons">
+        <button class="choice-btn choice-btn-primary" onclick="closeChoiceModal(); openSignupModal();">Webinar Details &amp; Free Resources</button>
+        <button class="choice-btn choice-btn-secondary" onclick="closeChoiceModal(); openZoomModal();">Just the Zoom Link for the 9/7/26 11am ET Webinar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div class="signup-modal-overlay" id="signup-modal" onclick="closeSignupModal(event)">
+    <div class="signup-modal-box">
+      <button class="signup-modal-close" onclick="closeSignupModal()" aria-label="Close">&times;</button>
+      <p class="section-eyebrow" style="text-align:center;">Stay in the loop</p>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Join us live on September 7.</h2>
+      <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Drop your email and we'll send you the details plus free resources.</p>
+      <div class="ml-embedded" id="webinar-ml-embed" data-form="TM3AOT"></div>
+      <div class="freebie-picker" id="webinar-freebie-picker" style="display:none;">
+        <p class="freebie-picker-title">Pick your Freebie!</p>
+        <div class="freebie-pick-item">
+          <p><strong>1) Course Engagement Scorecard:</strong> Most course creators know something isn't working, but don't know where to look.</p>
+          <a href="https://github.com/dazmuth/ec/releases/download/freebie-course-engagement-scorecard/Course-Engagement-Scorecard.pdf" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
+        </div>
+        <div class="freebie-pick-item">
+          <p><strong>2) The Dropout Autopsy:</strong> If your learners are leaving your course before the end, this five-question diagnostic tells you why.</p>
+          <a href="https://github.com/dazmuth/ec/releases/download/freebie-dropout-autopsy/Dropout-Autopsy.pdf" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zoom Link Modal -->
+  <div class="signup-modal-overlay" id="zoom-modal" onclick="closeZoomModal(event)">
+    <div class="signup-modal-box">
+      <button class="signup-modal-close" onclick="closeZoomModal()" aria-label="Close">&times;</button>
+      <p class="section-eyebrow" style="text-align:center;">Join us live</p>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Monday, September 7 at 11am ET</h2>
+      <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Click below to join the Zoom webinar:</p>
+      <a href="https://us04web.zoom.us/j/76816671400?pwd=CaPqa3C6G6XVA9wvSDvPSjS4OLrn1A" target="_blank" rel="noopener" class="zoom-link-btn">Join Zoom Webinar →</a>
+      <p class="zoom-link-raw">Or copy this link:<br /><a href="https://us04web.zoom.us/j/76816671400?pwd=CaPqa3C6G6XVA9wvSDvPSjS4OLrn1A" target="_blank" rel="noopener">https://us04web.zoom.us/j/76816671400?pwd=CaPqa3C6G6XVA9wvSDvPSjS4OLrn1A</a></p>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <p class="section-eyebrow">The Engaging Courses Blog</p>
+    <h1 class="page-title">Insights for course creators.</h1>
+    <p class="page-intro">Practical thinking on outcome-driven design, illustrated storytelling, and building courses that actually transform the people who take them.</p>
+  </div>
+
+  <div class="blog-wrap">
+
+    <!-- Featured post -->
+    <div class="featured-post">
+      <div>
+        <p class="featured-label">Live Event</p>
+        <h2>Join Us Live September 7: A Free Session on Building Courses That Transform</h2>
+        <p class="post-date">July 2025</p>
+        <p>We're going live to show you exactly what outcome-driven course design looks like in practice — and give you a framework you can apply to your own content immediately. Free to attend.</p>
+        <a href="/webinar/" class="btn-read">Read more & sign up</a>
+      </div>
+      <span class="featured-badge">Featured</span>
+    </div>
+
+    <!-- Post grid -->
+    <div class="post-grid">
+
+      <div class="post-card">
+        <p class="post-tag">Course Design</p>
+        <h3>Why Your Online Course Isn't Selling — And It Has Nothing to Do With Your Content</h3>
+        <p class="post-date">May 2026</p>
+        <p>You know your subject. You've put in the hours. So why aren't learners buying — or finishing — what you've built? The answer is probably not what you think.</p>
+        <a href="/blog/why-your-course-isnt-selling/" class="read-more">Read more →</a>
+      </div>
+
+      <div class="post-card">
+        <p class="post-tag">Instructional Design</p>
+        <h3>The Difference Between Teaching Information and Transforming Learners</h3>
+        <p class="post-date">June 2026</p>
+        <p>Most courses inform. The best courses transform. Here's what separates them — and why it matters more than anything else you'll do as a course creator.</p>
+        <a href="/blog/teaching-information-vs-transforming-learners/" class="read-more">Read more →</a>
+      </div>
+
+      <div class="post-card">
+        <p class="post-tag">Content Strategy</p>
+        <h3>Why We Use Illustrated Storytelling to Teach Course Design — And Why It Works</h3>
+        <p class="post-date">July 2026</p>
+        <p>Our hand-drawn animated characters aren't a stylistic quirk. They're a deliberate pedagogical choice — and one every course creator should understand.</p>
+        <a href="/blog/illustrated-storytelling-in-course-design/" class="read-more">Read more →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/images/URL-logo_engagingcourses.com.png" alt="engagingcourses.com" />
+        <p>Teaching course creators the skills to build outcome-driven content that transforms learners — and sells.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/engaging.courses/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://www.youtube.com/@EngagingCourses" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a href="https://www.facebook.com/1JozYGqpBR/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.x.com/engagingcourses/" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+          <a href="https://www.tiktok.com/@engagingcourses" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Engaging Courses — All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Countdown timer
+    const target = new Date('2026-09-07T11:00:00-04:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.querySelector('.countdown-bar').innerHTML = '<div style="font-size:1rem;font-weight:700;">We\'re live! Join us now.</div>';
+        return;
+      }
+
+      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Modals: choice, sign-up (email), zoom link
+    function openModal(id) {
+      document.getElementById(id).classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id, e) {
+      if (e && e.target !== document.getElementById(id) && !e.currentTarget.classList.contains('signup-modal-close')) return;
+      document.getElementById(id).classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function openChoiceModal() { openModal('choice-modal'); }
+    function closeChoiceModal(e) { closeModal('choice-modal', e); }
+
+    function openSignupModal() {
+      openModal('signup-modal');
+      document.getElementById('webinar-freebie-picker').style.display = 'none';
+      if (webinarFreebiePollInterval) clearInterval(webinarFreebiePollInterval);
+      webinarFreebiePollInterval = setInterval(checkWebinarFreebieSuccess, 500);
+      checkWebinarFreebieSuccess();
+    }
+    function closeSignupModal(e) { closeModal('signup-modal', e); }
+
+    let webinarFreebiePollInterval = null;
+    function checkWebinarFreebieSuccess() {
+      const successEl = document.querySelector('#webinar-ml-embed .ml-form-successBody');
+      if (successEl && successEl.offsetParent !== null) {
+        document.getElementById('webinar-freebie-picker').style.display = 'block';
+        clearInterval(webinarFreebiePollInterval);
+      }
+    }
+
+    function openZoomModal() { openModal('zoom-modal'); }
+    function closeZoomModal(e) { closeModal('zoom-modal', e); }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key !== 'Escape') return;
+      ['choice-modal', 'signup-modal', 'zoom-modal'].forEach(function(id) {
+        const el = document.getElementById(id);
+        if (el && el.classList.contains('open')) closeModal(id, {target: el});
+      });
+    });
+
+    // Formspree AJAX submission (shared by all fs-form forms on this page)
+    document.addEventListener('submit', async function(e) {
+      if (!e.target.classList.contains('fs-form')) return;
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const success = form.querySelector('.fs-note');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          if (success) success.style.display = 'block';
+          btn.textContent = 'Sent ✓';
+        } else {
+          btn.textContent = 'Error — try again';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error — try again';
+        btn.disabled = false;
+      }
+    });
+
+    // Nav dropdowns
+    function closeDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.classList.remove('open');
+      const trigger = document.querySelector('[aria-controls="' + id + '"]');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleContact(e) {
+      e.preventDefault();
+      const dropdown = document.getElementById('contact-dropdown');
+      const demoDropdown = document.getElementById('demo-dropdown');
+      const btn = e.currentTarget;
+      const isOpen = dropdown.classList.contains('open');
+      demoDropdown.classList.remove('open');
+      dropdown.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    function toggleDemo(e) {
+      e.preventDefault();
+      const dropdown = document.getElementById('demo-dropdown');
+      const contactDropdown = document.getElementById('contact-dropdown');
+      const btn = e.currentTarget;
+      const isOpen = dropdown.classList.contains('open');
+      contactDropdown.classList.remove('open');
+      dropdown.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', !isOpen);
+      if (!isOpen) {
+        const ta = document.getElementById('demo-message');
+        if (ta && !ta.value) ta.value = 'I want to see a demo of Engaging Courses content';
+      }
+    }
+
+    document.addEventListener('click', function(e) {
+      const contactWrap = document.getElementById('contact-nav-wrap');
+      const demoWrap = document.getElementById('demo-nav-wrap');
+      if (contactWrap && !contactWrap.contains(e.target)) {
+        document.getElementById('contact-dropdown').classList.remove('open');
+      }
+      if (demoWrap && !demoWrap.contains(e.target)) {
+        document.getElementById('demo-dropdown').classList.remove('open');
+      }
+    });
+  </script>
+
+</body>
+</html>
