@@ -5,7 +5,7 @@
 
 ---
 
-## July 2025 — Session 1 (Foundation Session)
+## July 2026 — Session 1 (Foundation Session)
 
 This was a very long foundational session covering the entire site build from scratch.
 
