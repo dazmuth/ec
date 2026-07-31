@@ -15,7 +15,7 @@
 **Target audience:** Online course creators and content producers who have material but don't know why it isn't selling or engaging learners
 **Brand positioning:** Outcome-driven, transformative course design — NOT superficial "build a course" tooling. We teach skills that transform both the creator and their learners.
 **Key differentiator:** Illustrated animation and hand-drawn storytelling characters used as deliberate pedagogical tools, not just decoration. ~20 short animated videos (15–25 sec) in B&W illustrated style.
-**Launch event:** Live session Sunday August 2, 2026 at 11am ET
+**Launch event:** Live session Sunday September 7, 2026 at 11am ET (moved from August 2, 2026)
 
 ---
 
@@ -29,7 +29,8 @@ Always emphasize:
 - Differentiate from platforms that teach software, not pedagogy
 
 Avoid:
-- "Webinar" (too sales-y) — use "live session" or "live event"
+- "Webinar" in brand copy and blog posts — use "live session" or "live event"
+- EXCEPTION: "Webinar" IS used in social media captions and campaign-specific CTAs (e.g. "Join the free Webinar") because it performs better in search and is the term the audience uses
 - Superficial feature-list language
 - Overpromising ("the best", "number one")
 
@@ -56,10 +57,13 @@ Tone: Confident and credible, warm and approachable. Professional but never pret
 ## MailerLite Details
 
 - **Account:** 2504099
-- **Email capture form (homepage, freebies, blog):** `TM3AOT`
+- **Webinar/general signup form:** `TM3AOT` — used on homepage, webinar page, blog post 4, countdown modal
   - Fields: Email, Name, Phone (optional)
   - Button text: "Engage Me!"
-- **Contact/Ask a Question form:** `V8INNU` — NOTE: this form was replaced by Formspree for actual contact use. V8INNU may still exist in MailerLite but Formspree handles contact submissions.
+  - This is the primary list-building form
+- **Freebies-only form:** `Vs4wxq` — used on freebies page for freebie-specific signups
+- **Contact/Ask a Question form:** `V8INNU` — NOTE: replaced by Formspree for actual contact use. V8INNU may still exist in MailerLite but is not actively used.
+- One form per distinct offer — do not consolidate TM3AOT and Vs4wxq
 - **Universal script** (goes in `<head>` of every page that uses MailerLite):
 ```html
 <script>
@@ -164,12 +168,21 @@ Tone: Confident and credible, warm and approachable. Professional but never pret
 │   │       ├── zhao-paris-bistro.jpg
 │   │       └── zoom-screen.png
 │   └── videos/                ← MP4s (not used in carousel — too large)
+├── webinar/
+│   └── index.html             ← Webinar landing page (bio link destination for social media)
 └── blog/
     ├── why-your-course-isnt-selling.html
     ├── teaching-information-vs-transforming-learners.html
     ├── illustrated-storytelling-in-course-design.html
-    └── join-us-live-august-2.html
+    └── join-us-live-august-2.html  ← Post-Sept 7: archive or replace
 ```
+
+**Nav order:** Home / About / Academy / Freebies / Blog / Webinars / Request Demo / Contact
+
+**Freebies page** has two live downloadable PDFs hosted via GitHub Releases:
+- Course Dropout Autopsy → freebie-dropout-autopsy
+- Course Engagement Scorecard → freebie-course-engagement-scorecard
+Freebies page shows webinar banner at top — strong secondary CTA destination for social posts with diagnostic/problem-aware themes.
 
 ---
 
@@ -177,7 +190,7 @@ Tone: Confident and credible, warm and approachable. Professional but never pret
 
 1. **Social strip** — Dark olive bar above nav. Icons for Instagram, YouTube, Facebook, X, TikTok
 2. **Sticky nav** — Logo left, links right. Two dropdown buttons: "Request Demo" (Gor color) and "Contact" (Dusty color). Both use Formspree AJAX forms that open inline dropdowns.
-3. **Countdown bar** — Dusty background. Counts to August 2, 2026 11am ET. Desktop: Sign Up buttons flanking countdown (Isabelline style). Mobile: single Black Olive Sign Up button below countdown. Sign Up opens MailerLite modal overlay.
+3. **Countdown bar** — Dusty background. Counts to September 7, 2026 11am ET (updated from August 2). Desktop: Sign Up buttons flanking countdown (Isabelline style). Mobile: single Black Olive Sign Up button below countdown. Sign Up opens MailerLite modal overlay.
 4. **Hero** — "Engaging Courses" H1, tagline H2, Join Academy CTA, portrait YouTube video (no autoplay). Video: https://youtube.com/shorts/d4-ggbGcFRA
 5. **Scrolling carousel** — 12 images from assets/images/carousel/, duplicated for seamless loop, 60s animation, pauses on hover
 6. **Why section** — 3 cards: Outcome-Driven Design, Creative & Distinctive, Real Skills Real Results
