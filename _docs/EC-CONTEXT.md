@@ -1,7 +1,7 @@
 # Engaging Courses — Permanent Context File
 > Upload this file to every new Claude chat session working on engagingcourses.com.
 > This file changes only when something fundamental changes (new platform, domain, major redesign).
-> Last updated: July 2025
+> Last updated: July 2026
 
 ---
 
@@ -209,6 +209,49 @@ Tone: Confident and credible, warm and approachable. Professional but never pret
 - **Image rule:** All images must have web-safe filenames — no parentheses, no spaces. Hyphens and underscores only.
 - **Carousel images:** Always go in `assets/images/carousel/` subfolder
 - **Blog posts:** Always go in `/blog/` subfolder
+
+---
+
+## GitHub Releases — Freebie PDF Hosting
+
+PDFs are hosted via GitHub Releases in the dazmuth/ec repo. This gives stable, permanent download URLs and tracks download counts per release.
+
+### Naming Convention
+One release per freebie. Tag uses a stable descriptive slug — never a date in the tag.
+
+**Current releases:**
+- Tag: `freebie-dropout-autopsy` → file: `Dropout-Autopsy.pdf`
+- Tag: `freebie-course-engagement-scorecard` → file: `Course-Engagement-Scorecard.pdf`
+
+**URL structure:**
+```
+https://github.com/dazmuth/ec/releases/download/freebie-dropout-autopsy/Dropout-Autopsy.pdf
+https://github.com/dazmuth/ec/releases/download/freebie-course-engagement-scorecard/Course-Engagement-Scorecard.pdf
+```
+
+### How to Add a New Freebie — Step by Step
+1. Go to github.com/dazmuth/ec → click "Releases" in right sidebar
+2. Click "Draft a new release"
+3. In "Choose a tag" field, type the new slug and select "Create new tag"
+   - Format: `freebie-[descriptive-name]`
+   - Examples: `freebie-module-structure-template`, `freebie-25-second-formula`, `freebie-engagement-checklist`
+4. Set release title to human-readable name with date: "Module Structure Template — added August 2026"
+5. Add release notes: brief description of what the freebie is
+6. Upload the PDF by dragging into the "Attach binaries" area
+   - Filename must be web-safe: hyphens only, no spaces, no parentheses
+   - Example: `Module-Structure-Template.pdf`
+7. Click "Publish release" (not "Save draft")
+8. Copy the resulting download URL
+9. Tell Claude the URL — Claude will update freebies.html with the new download button
+
+### When Replacing an Existing Freebie
+Do NOT edit the existing release. Create a new release with a versioned tag:
+- Example: `freebie-dropout-autopsy-v2` or `freebie-dropout-autopsy-2026-09`
+- Old release stays archived with its historical download count intact
+- Tell Claude the new URL and Claude will update the link on the site
+
+### Why This System
+Stable slugs mean download URLs never change unless a freebie is retired. The date goes in the release title for record-keeping, not in the tag where it would appear in the URL. URLs are shareable in bio links, blog posts, and email campaigns without ever silently breaking.
 
 ---
 
