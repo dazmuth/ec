@@ -127,6 +127,25 @@
     .zoom-link-btn { display: block; text-align: center; background: var(--dusty); color: var(--white); font-weight: 600; font-size: 0.88rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 1.5rem; border-radius: 2px; transition: background 0.2s; }
     .zoom-link-btn:hover { background: var(--gor); }
 
+    /* Save my spot — jump link to signup form */
+    .save-spot-wrap { text-align: center; margin-bottom: 1.75rem; }
+    .save-spot-btn {
+      display: inline-block;
+      background: var(--dusty);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.75rem 1.75rem;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .save-spot-btn:hover { background: var(--gor); }
+
     /* Webinar freebie picker (shown after successful webinar signup) */
     .freebie-picker { margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--gray); text-align: left; }
     .freebie-picker-title { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--olive); text-align: center; margin-bottom: 1rem; }
@@ -226,6 +245,9 @@
   </nav>
 
   <div class="article-wrap">
+    <div class="save-spot-wrap">
+      <button type="button" class="save-spot-btn" onclick="scrollToSignup()">Save my Spot in Webinar</button>
+    </div>
     <div class="article-meta">
       <h1 class="article-title">Join us Live September 7, 2026: A Free Session on Building Courses That Transform</h1>
       <p class="article-subtitle">We're going live to show you exactly what outcome-driven course design looks like in practice — and give you a framework you can apply to your own content immediately.</p>
@@ -285,7 +307,7 @@
 
     </div>
 
-    <div class="signup-box">
+    <div class="signup-box" id="webinar-signup">
       <h3>Save your spot — it's free.</h3>
       <p>Enter your email and we'll send you everything you need for September 7.</p>
       <div class="ml-form-wrap">
@@ -325,13 +347,21 @@
     </div>
   </footer>
   <script>
-    // Webinar freebie picker: reveal once MailerLite confirms signup
+    // Save my spot -> jump to signup form, centered
+    function scrollToSignup() {
+      document.getElementById('webinar-signup').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Webinar freebie picker: reveal once MailerLite confirms signup, then scroll back to top
     let webinarFreebiePollInterval = setInterval(checkWebinarFreebieSuccess, 500);
     function checkWebinarFreebieSuccess() {
       const successEl = document.querySelector('#webinar-ml-embed .ml-form-successBody');
       if (successEl && successEl.offsetParent !== null) {
         document.getElementById('webinar-freebie-picker').style.display = 'block';
         clearInterval(webinarFreebiePollInterval);
+        setTimeout(function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 2000);
       }
     }
 
