@@ -115,6 +115,13 @@
     .signup-btn-desktop { background: var(--isabelline); color: var(--olive); display: inline-block; }
     .signup-btn-mobile { background: var(--olive); color: var(--white); display: none; width: 100%; margin-top: 0.75rem; border-radius: 30px; white-space: normal; }
 
+    /* Webinar blink — Freebies page only */
+    @keyframes webinarBlink { 0%, 60% { opacity: 1; } 80% { opacity: 0.4; } 100% { opacity: 1; } }
+    .signup-btn-blink { animation: webinarBlink 1.8s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .signup-btn-blink { animation: none; }
+    }
+
     /* Sign Up modal */
     .signup-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(62,62,62,0.55); z-index: 500; align-items: center; justify-content: center; padding: 1.5rem; }
     .signup-modal-overlay.open { display: flex; }
@@ -384,7 +391,7 @@
 
   <!-- Countdown bar -->
   <div class="countdown-bar" role="timer" aria-live="polite">
-    <button class="signup-btn signup-btn-desktop" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
+    <button class="signup-btn signup-btn-desktop signup-btn-blink" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
     <div class="countdown-center">
       <div class="countdown-label">Join us live — Monday September 7 at 11am ET</div>
       <div class="countdown-units">
@@ -397,8 +404,8 @@
         <div class="countdown-unit"><span class="num" id="cd-secs">--</span><span class="lbl">Secs</span></div>
       </div>
     </div>
-    <button class="signup-btn signup-btn-desktop" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
-    <button class="signup-btn signup-btn-mobile" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
+    <button class="signup-btn signup-btn-desktop signup-btn-blink" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
+    <button class="signup-btn signup-btn-mobile signup-btn-blink" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
   </div>
 
   <!-- Choice Modal (Webinar details vs Zoom link) -->
