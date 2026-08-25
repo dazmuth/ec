@@ -30,6 +30,16 @@
   </script>
   <!-- End MailerLite Universal -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NSXM6TD1ZR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NSXM6TD1ZR');
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=TeX+Gyre+Adventor:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -324,7 +334,7 @@
   <div class="countdown-bar" role="timer" aria-live="polite">
     <button class="signup-btn signup-btn-desktop" onclick="openChoiceModal()">Sign Up for Free Webinar</button>
     <div class="countdown-center">
-      <div class="countdown-label">Join us live — Monday September 7 at 11am ET</div>
+      <div class="countdown-label">Join us live — Sunday October 18 at 2pm ET</div>
       <div class="countdown-units">
         <div class="countdown-unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
         <span class="countdown-sep">:</span>
@@ -344,11 +354,11 @@
     <div class="signup-modal-box">
       <button class="signup-modal-close" onclick="closeChoiceModal()" aria-label="Close">&times;</button>
       <p class="section-eyebrow" style="text-align:center;">Join us live</p>
-      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Monday, September 7 at 11am ET</h2>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Sunday, October 18 at 2pm ET</h2>
       <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">What would you like?</p>
       <div class="choice-buttons">
         <button class="choice-btn choice-btn-primary" onclick="closeChoiceModal(); openSignupModal();">Webinar Details &amp; Free Resources</button>
-        <button class="choice-btn choice-btn-secondary" onclick="closeChoiceModal(); openZoomModal();">Just the Zoom Link for the 9/7/26 11am ET Webinar</button>
+        <button class="choice-btn choice-btn-secondary" onclick="closeChoiceModal(); openZoomModal();">Just the Zoom Link for the 10/18/26 2pm ET Webinar</button>
       </div>
     </div>
   </div>
@@ -358,7 +368,7 @@
     <div class="signup-modal-box">
       <button class="signup-modal-close" onclick="closeSignupModal()" aria-label="Close">&times;</button>
       <p class="section-eyebrow" style="text-align:center;">Stay in the loop</p>
-      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Join us live on September 7.</h2>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Join us live on October 18.</h2>
       <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Drop your email and we'll send you the details plus free resources.</p>
       <div class="ml-embedded" id="webinar-ml-embed" data-form="TM3AOT"></div>
       <div class="freebie-picker" id="webinar-freebie-picker" style="display:none;">
@@ -380,7 +390,7 @@
     <div class="signup-modal-box">
       <button class="signup-modal-close" onclick="closeZoomModal()" aria-label="Close">&times;</button>
       <p class="section-eyebrow" style="text-align:center;">Join us live</p>
-      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Monday, September 7 at 11am ET</h2>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Sunday, October 18 at 2pm ET</h2>
       <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Click below to join the Zoom webinar:</p>
       <a href="https://us04web.zoom.us/j/76816671400?pwd=CaPqa3C6G6XVA9wvSDvPSjS4OLrn1A" target="_blank" rel="noopener" class="zoom-link-btn">Join Zoom Webinar →</a>
       <p class="zoom-link-raw">Or copy this link:<br /><a href="https://us04web.zoom.us/j/76816671400?pwd=CaPqa3C6G6XVA9wvSDvPSjS4OLrn1A" target="_blank" rel="noopener">https://us04web.zoom.us/j/76816671400?pwd=CaPqa3C6G6XVA9wvSDvPSjS4OLrn1A</a></p>
@@ -399,8 +409,8 @@
     <div class="featured-post">
       <div>
         <p class="featured-label">Live Event</p>
-        <h2>Join Us Live September 7: A Free Session on Building Courses That Transform</h2>
-        <p class="post-date">July 2025</p>
+        <h2>Join Us Live October 18: A Free Session on Building Courses That Transform</h2>
+        <p class="post-date">August 2026</p>
         <p>We're going live to show you exactly what outcome-driven course design looks like in practice — and give you a framework you can apply to your own content immediately. Free to attend.</p>
         <a href="/webinar/" class="btn-read">Read more & sign up</a>
       </div>
@@ -459,7 +469,7 @@
 
   <script>
     // Countdown timer
-    const target = new Date('2026-09-07T11:00:00-04:00');
+    const target = new Date('2026-10-18T14:00:00-04:00');
 
     function updateCountdown() {
       const now = new Date();
