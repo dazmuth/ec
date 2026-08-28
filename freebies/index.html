@@ -444,11 +444,11 @@
         <p class="freebie-picker-title">Pick your Freebie!</p>
         <div class="freebie-pick-item">
           <p><strong>1) Course Engagement Scorecard:</strong> Most course creators know something isn't working, but don't know where to look.</p>
-          <a href="https://github.com/dazmuth/ec/releases/download/freebie-course-engagement-scorecard/Course-Engagement-Scorecard.pdf" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
+          <a href="#" id="webinar-freebie-link-scorecard" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
         </div>
         <div class="freebie-pick-item">
           <p><strong>2) The Dropout Autopsy:</strong> If your learners are leaving your course before the end, this five-question diagnostic tells you why.</p>
-          <a href="https://github.com/dazmuth/ec/releases/download/freebie-dropout-autopsy/Dropout-Autopsy.pdf" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
+          <a href="#" id="webinar-freebie-link-autopsy" target="_blank" rel="noopener" class="zoom-link-btn">Download PDF</a>
         </div>
       </div>
     </div>
@@ -467,15 +467,28 @@
   </div>
 
   <!-- Freebie Email-Gate Modal -->
-  <div class="signup-modal-overlay" id="freebie-modal" onclick="closeFreebieModal(event)">
+  <div class="signup-modal-overlay" id="freebie-modal-scorecard" onclick="closeFreebieModal('scorecard', event)">
     <div class="signup-modal-box">
-      <button class="signup-modal-close" onclick="closeFreebieModal()" aria-label="Close">&times;</button>
+      <button class="signup-modal-close" onclick="closeFreebieModal('scorecard')" aria-label="Close">&times;</button>
       <p class="section-eyebrow" style="text-align:center;">One quick step</p>
-      <h2 id="freebie-modal-title" style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Get your freebie</h2>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Get the Course Engagement Scorecard</h2>
       <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Tell us your name and email, and your freebie will be yours to download!</p>
-      <div class="ml-embedded" id="freebie-ml-embed" data-form="Vs4wxq"></div>
-      <div id="freebie-download-ready" style="display:none;margin-top:1rem;">
-        <a id="freebie-download-link" href="#" target="_blank" rel="noopener" class="zoom-link-btn">Download Your Freebie →</a>
+      <div class="ml-embedded" id="freebie-ml-embed-scorecard" data-form="Fwa2AK"></div>
+      <div id="freebie-download-ready-scorecard" style="display:none;margin-top:1rem;">
+        <a id="freebie-download-link-scorecard" href="#" target="_blank" rel="noopener" class="zoom-link-btn">Download Your Freebie →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="signup-modal-overlay" id="freebie-modal-autopsy" onclick="closeFreebieModal('autopsy', event)">
+    <div class="signup-modal-box">
+      <button class="signup-modal-close" onclick="closeFreebieModal('autopsy')" aria-label="Close">&times;</button>
+      <p class="section-eyebrow" style="text-align:center;">One quick step</p>
+      <h2 style="font-family:var(--font-head);font-size:1.3rem;font-weight:700;color:var(--olive);text-align:center;margin-bottom:0.5rem;">Get the Dropout Autopsy</h2>
+      <p style="font-size:0.88rem;color:var(--gor);text-align:center;margin-bottom:1.25rem;">Tell us your name and email, and your freebie will be yours to download!</p>
+      <div class="ml-embedded" id="freebie-ml-embed-autopsy" data-form="yYD8Ks"></div>
+      <div id="freebie-download-ready-autopsy" style="display:none;margin-top:1rem;">
+        <a id="freebie-download-link-autopsy" href="#" target="_blank" rel="noopener" class="zoom-link-btn">Download Your Freebie →</a>
       </div>
     </div>
   </div>
@@ -495,7 +508,7 @@
         <div class="freebie-icon">📊</div>
         <h3>Course Engagement Scorecard</h3>
         <p>Most course creators know something isn't working, but don't know where to look. This scorecard gives you a concrete starting point: nine scored indicators across three of the eight domains of course design, each with a clear 0-1-2 rubric so you can evaluate your own course in under 20 minutes. Walk away knowing exactly which design areas are strong, which are costing you completions, and what to fix first.</p>
-        <button type="button" class="btn-download" onclick="openFreebieModal('https://github.com/dazmuth/ec/releases/download/freebie-course-engagement-scorecard/Course-Engagement-Scorecard.pdf', 'Course Engagement Scorecard')">Download PDF</button>
+        <button type="button" class="btn-download" onclick="openFreebieModal('scorecard')">Download PDF</button>
       </div>
 
       <div class="freebie-card">
@@ -503,7 +516,7 @@
         <div class="freebie-icon">🔍</div>
         <h3>The Dropout Autopsy</h3>
         <p>If your learners are leaving your course before the end, this five-question diagnostic tells you why. Each question targets a specific structural failure that causes drop-off, and every answer, whether yes or no, comes with a plain-language explanation of what it reveals about your course's design. By the time you finish, you will have a clear picture of where your course is losing people and which domain to address first.</p>
-        <button type="button" class="btn-download" onclick="openFreebieModal('https://github.com/dazmuth/ec/releases/download/freebie-dropout-autopsy/Dropout-Autopsy.pdf', 'Dropout Autopsy')">Download PDF</button>
+        <button type="button" class="btn-download" onclick="openFreebieModal('autopsy')">Download PDF</button>
       </div>
 
     </div>
@@ -585,6 +598,8 @@
     function checkWebinarFreebieSuccess() {
       const successEl = document.querySelector('#webinar-ml-embed .ml-form-successBody');
       if (successEl && successEl.offsetParent !== null) {
+        document.getElementById('webinar-freebie-link-scorecard').href = freebieConfig.scorecard.url;
+        document.getElementById('webinar-freebie-link-autopsy').href = freebieConfig.autopsy.url;
         document.getElementById('webinar-freebie-picker').style.display = 'block';
         clearInterval(webinarFreebiePollInterval);
       }
@@ -593,34 +608,53 @@
     function openZoomModal() { openModal('zoom-modal'); }
     function closeZoomModal(e) { closeModal('zoom-modal', e); }
 
-    // Freebie email-gate modal
-    let freebiePollInterval = null;
+    // Freebie email-gate modals (one per freebie, one per MailerLite form)
+    const freebieConfig = {
+      scorecard: {
+        modalId: 'freebie-modal-scorecard',
+        mlEmbedId: 'freebie-ml-embed-scorecard',
+        downloadReadyId: 'freebie-download-ready-scorecard',
+        downloadLinkId: 'freebie-download-link-scorecard',
+        url: 'https://github.com/dazmuth/ec/releases/download/freebie-course-engagement-scorecard/Course-Engagement-Scorecard.pdf',
+        pollInterval: null
+      },
+      autopsy: {
+        modalId: 'freebie-modal-autopsy',
+        mlEmbedId: 'freebie-ml-embed-autopsy',
+        downloadReadyId: 'freebie-download-ready-autopsy',
+        downloadLinkId: 'freebie-download-link-autopsy',
+        url: 'https://github.com/dazmuth/ec/releases/download/freebie-dropout-autopsy/Dropout-Autopsy.pdf',
+        pollInterval: null
+      }
+    };
 
-    function openFreebieModal(pdfUrl, label) {
-      document.getElementById('freebie-modal-title').textContent = 'Get the ' + label;
-      document.getElementById('freebie-download-link').href = pdfUrl;
-      document.getElementById('freebie-download-ready').style.display = 'none';
-      openModal('freebie-modal');
-      if (freebiePollInterval) clearInterval(freebiePollInterval);
-      freebiePollInterval = setInterval(checkFreebieSuccess, 500);
-      checkFreebieSuccess();
+    function openFreebieModal(freebieKey) {
+      const cfg = freebieConfig[freebieKey];
+      document.getElementById(cfg.downloadLinkId).removeAttribute('href');
+      document.getElementById(cfg.downloadReadyId).style.display = 'none';
+      openModal(cfg.modalId);
+      if (cfg.pollInterval) clearInterval(cfg.pollInterval);
+      cfg.pollInterval = setInterval(function() { checkFreebieSuccess(freebieKey); }, 500);
+      checkFreebieSuccess(freebieKey);
     }
 
-    function checkFreebieSuccess() {
-      const successEl = document.querySelector('#freebie-ml-embed .ml-form-successBody');
+    function checkFreebieSuccess(freebieKey) {
+      const cfg = freebieConfig[freebieKey];
+      const successEl = document.querySelector('#' + cfg.mlEmbedId + ' .ml-form-successBody');
       if (successEl && successEl.offsetParent !== null) {
-        document.getElementById('freebie-download-ready').style.display = 'block';
-        clearInterval(freebiePollInterval);
+        document.getElementById(cfg.downloadLinkId).href = cfg.url;
+        document.getElementById(cfg.downloadReadyId).style.display = 'block';
+        clearInterval(cfg.pollInterval);
       }
     }
 
-    function closeFreebieModal(e) {
-      closeModal('freebie-modal', e);
+    function closeFreebieModal(freebieKey, e) {
+      closeModal(freebieConfig[freebieKey].modalId, e);
     }
 
     document.addEventListener('keydown', function(e) {
       if (e.key !== 'Escape') return;
-      ['choice-modal', 'signup-modal', 'zoom-modal', 'freebie-modal'].forEach(function(id) {
+      ['choice-modal', 'signup-modal', 'zoom-modal', 'freebie-modal-scorecard', 'freebie-modal-autopsy'].forEach(function(id) {
         const el = document.getElementById(id);
         if (el && el.classList.contains('open')) closeModal(id, {target: el});
       });
