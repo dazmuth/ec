@@ -1,6 +1,8 @@
 # Engaging Courses — Social Media Strategy & Campaign Reference
 > Upload this file alongside EC-CONTEXT.md at the start of any Claude session involving social media.
-> Last updated: July 2026
+> Last updated: October 8, 2026
+
+> **STATUS (Oct 8, 2026): No webinars.** The webinar program was dropped, so every webinar line, CTA, countdown reference and webinar-only video below is retired. Nothing in this file should push people to a webinar. The primary destination for social traffic is now the **Freebies page** (engagingcourses.com/freebies/) and the homepage. Sections that were built around the webinar are kept only as history or marked "retired."
 
 ---
 
@@ -11,8 +13,8 @@
 | Instagram (@engaging.courses) | Primary conversion platform | Tier 1 | Best for profile visits and link taps. Reels get algorithm distribution to non-followers. |
 | TikTok (@engagingcourses) | Awareness platform | Tier 1 | Highest organic reach for short video. Low conversion but broad discovery. |
 | Facebook (facebook.com/1JozYGqpBR/) | Auto-crosspost only | Tier 2 | Set up via Meta Business Suite to mirror Instagram posts automatically. Zero extra effort. |
-| X (@engagingcourses) | Deprioritized | Skip for now | Short video performs poorly for discovery. Text-based audience only. Revisit post-Sept 7. |
-| YouTube (@EngagingCourses) | Long-form home | Passive | Intro/origin story video lives here (2.5 min). Too long for IG/TikTok. Post-Sept 7 strategy TBD. |
+| X (@engagingcourses) | Deprioritized | Skip for now | Short video performs poorly for discovery. Text-based audience only. Revisit later. |
+| YouTube (@EngagingCourses) | Long-form home | Passive | Intro/origin story video lives here (2.5 min). Too long for IG/TikTok. Strategy TBD. |
 | Bluesky | Not evaluated | Skip for now | Not yet researched for this use case. |
 
 **Key finding:** Instagram is the conversion engine (link taps, profile visits). TikTok is the reach engine. Don't judge TikTok by conversion metrics — judge it by views and follower growth.
@@ -28,8 +30,8 @@
 
 **Rotating contextual sixth tag by video type:**
 - AI videos: `#aiforcreators`
-- Webinar posts: `#freecourse`
 - Others: omit sixth tag
+- (The old `#freecourse` tag for webinar posts is retired.)
 
 **What actually drives discovery (in order of importance):**
 1. Watch time / completion rate — most important signal. Short videos (15-25 sec) have structural advantage.
@@ -66,26 +68,24 @@ Every caption follows this structure:
 
 [CTA line]
 
-[Red webinar line — pre-event posts only]
-
 [Hashtags]
 
 [Video ID IG ALT TEXT]
 [Alt text description]
 ```
 
+(The red "webinar line" that used to sit between the CTA and the hashtags is **retired**. Remove it from any caption not yet posted.)
+
 **CTA variations:**
 - Default: "Learn skills to create courses that sell at engagingcourses.com"
 - Freebie posts: "Free dropout diagnostic — link in bio — freebies page" OR "Free course engagement scorecard — link in bio — freebies page"
-- Webinar posts: "Register free — link in bio"
-
-**Webinar line (pre-event captions only, in red in the campaign doc):**
-"Join the free Webinar [date] 11am ET."
+- ~~Webinar posts: "Register free — link in bio"~~ — retired
 
 **Bio link strategy:**
 - Default bio link: engagingcourses.com (homepage)
-- On days posting a freebie-linked video: swap bio link to engagingcourses.com/freebies.html, swap back next morning
-- Webinar page (engagingcourses.com/webinar/) is the primary social bio destination during active campaign periods
+- On days posting a freebie-linked video: swap bio link to **engagingcourses.com/freebies/** (clean URL — the old `/freebies.html` address no longer exists on the live site), swap back next morning
+- Use UTM-tagged versions of these links so GA4 shows which platform and post drove the visit
+- The `/webinar/` page is gone — remove it from any bio link or link-in-bio tool
 
 **Alt text:** Written in plain, matter-of-fact descriptive language. Describes the visual action for accessibility AND feeds Instagram's visual recognition AI. Do not use marketing language in alt text. Aaron writes alt text by watching each video.
 
@@ -117,7 +117,7 @@ All other Drive script documents are unproduced scripts — ignore them.
 - I2 [Bucket B] — Great reviews ≠ great retention
 - I4 [Bucket B] — Landing page covered in credentials nobody asked for
 - I6 [Bucket B] — Headline that describes what you teach vs what learner gets
-- I9 [Bucket B] POST-EVENT ONLY — Course description nobody reads. No webinar line.
+- I9 [Bucket B] — Course description nobody reads. (Was held as "post-event only"; with no event, it can be posted like any other video. No webinar line.)
 
 **PROBLEM-AWARE (5 videos)**
 - P1 [Bucket A] * alt text needed — 20 years mastering craft ≠ teaching it
@@ -136,19 +136,17 @@ All other Drive script documents are unproduced scripts — ignore them.
 - TL8 [Bucket B] — Page full of buy buttons, zero context for why to click
 - #TL10 [Bucket B] — Watching ≠ doing. Bananas Foster kitchen fire. (Carousel, 3 panels) → SCORECARD CTA
 
-**WEBINAR (2 videos — to be produced)**
-- W1 [Bucket C] * to be produced — Straight announcement: date, time, what they walk away with
-- W2 [Bucket C] * to be produced — "Reason to show up": completion rate diagnostic preview
+**WEBINAR (2 videos) — RETIRED**
+- W1 and W2 were planned announcement videos for the webinar. They were never produced and will not be. The library is effectively 24 usable videos.
 
 ### Bucket Classification
 - **Bucket A** = Hook/Curiosity — lead with these, post first in any campaign
 - **Bucket B** = Value/Education — workhorse content, mid-campaign
-- **Bucket C** = Direct CTA/Event — hold for final week before event
+- **Bucket C** = Direct CTA — with no event to build toward, use these as occasional Academy/freebie pushes
 
 ### Alt Text Status
 - ✓ Confirmed from Drive: AI3, AI8, AI15, AI16, E2, E3, E6, E8, E9, I1, I2, I4, I6, I9, P2, P5, P11, P12, TL1, TL4, TL7, TL8, TL10
 - * Still needed: AI6 (field blank in Drive), P1 (section never written), PR1 (section never written)
-- W1, W2: not yet produced
 
 ### Videos Pointing to Freebies Page
 These posts get the freebies CTA and bio link swap on posting day:
@@ -156,12 +154,11 @@ I1, P5, P11, E8, P1, TL10
 
 ---
 
-## Campaign History — July 13 to July 31, 2026
+## Campaign History — July 13 to July 31, 2026 (historical)
 
 **Campaign ran:** July 13, 2026 — posting 1/day weeks 1-2, ramping to 2/day final week
 
-**Webinar originally:** August 2, 2026 at 11am ET
-**Webinar moved to:** September 7, 2026 at 11am ET — campaign did not gain sufficient traction in time
+**Webinar dates over time:** Aug 2, 2026 → Sept 7, 2026 → Oct 18, 2026 → cancelled Oct 8, 2026 (no webinars)
 
 **Videos posted before campaign paused (in order):**
 AI8, E6, E9 — confirmed posted as of session close
@@ -177,46 +174,45 @@ AI8, E6, E9 — confirmed posted as of session close
 
 **What didn't work:** TikTok drove no profile visits or conversions. Zero email signups across campaign duration — expected for niche organic-only campaign with no prior audience.
 
-**Key decision:** Aaron and Tim decided not to change strategy mid-campaign. Correct call — organic niche campaign takes time. Webinar moved to September 7 to allow more runway.
+**Key decision:** Aaron and Tim decided not to change strategy mid-campaign. Correct call — organic niche campaign takes time.
 
 ---
 
 ## Posting Schedule — What Remains
 
-Campaign document: EC-Campaign-2026-v3.docx (generated this session, Courier New, red webinar line)
+Campaign document: **EC-Campaign-2026-v4.rtf** is in the project; it and the older v3 .docx still contain the red webinar line on every caption and a webinar-based calendar. Both need a new version with the webinar lines removed and the calendar rebuilt around freebies and the Academy. (Claude cannot edit the .rtf in place — ask for a fresh version when ready.)
 
 **Videos still to post (held back from July campaign):**
-AI3, AI6, AI15, AI16, E2, E3, E8, I1, I2, I4, I6, P1, P2, P5, P11, P12, PR1, TL1, TL4, TL7, TL8, TL10
+AI3, AI6, AI15, AI16, E2, E3, E8, I1, I2, I4, I6, I9, P1, P2, P5, P11, P12, PR1, TL1, TL4, TL7, TL8, TL10
 
-**Post-event only (no webinar line):** I9
-
-**Still to produce:** W1, W2 (webinar-specific videos — update date to September 7)
-
-**For September 7 campaign:** Update all webinar lines in captions from "8/2/26" to the correct September date. The campaign document will need a new version with updated dates.
+**Retired:** W1, W2 (webinar videos); the "post-event only" restriction on I9.
 
 ---
 
 ## Freebie Campaign Strategy
 
-Tim's idea: use freebie-specific posts to test which pain points resonate most with audience, then use download data to prioritize which new freebies to produce next.
+Tim's idea: use freebie-specific posts to test which pain points resonate most with audience, then use download data to prioritize which new freebies to produce next. **This is now the main conversion path from social.**
 
-**Phase 1 (passive):** 6 posts in regular campaign point to freebies page. Track downloads day-of bio link swap.
+**Phase 1 (passive):** 6 posts in regular campaign point to the freebies page. Track signups on the day of each bio link swap.
 
-**Phase 2 (dedicated posts):** After event, create posts whose sole purpose is promoting a specific freebie. One post per freebie. Static image or text card — no new video production needed.
+**Phase 2 (dedicated posts):** Create posts whose sole purpose is promoting a specific freebie. One post per freebie. Static image or text card — no new video production needed.
 
-**Phase 3 (data-driven):** Which freebie gets downloaded more = which pain point resonates most = what to build next (both freebies and paid products).
+**Phase 3 (data-driven):** Which freebie gets more signups = which pain point resonates most = what to build next (both freebies and paid products).
 
-**Tracking:** Swap bio link to freebies page on freebie post days. Check MailerLite and site analytics for download spikes. No UTM tracking set up yet — worth adding before September campaign.
+**Tracking (now in place):**
+- Each freebie has its own MailerLite form (Scorecard `Fwa2AK`, Autopsy `yYD8Ks`), so subscriber counts per form show which freebie people want. Trust these, not GitHub's download counter.
+- GA4 is installed on every page (page views only; no custom events yet) and UTM-tagged bio links show which platform sent the visit.
+- Freebies are currently still reachable through GitHub's public Releases page without an email, so downloads can exceed signups. See EC-CONTEXT.md, "Freebie Gate."
 
-**5 additional freebies outlined but not yet produced** — produce based on Phase 3 data.
+**5 additional freebies outlined but not yet produced** — produce based on Phase 3 data. Note the free MailerLite plan allows only 3 forms (all in use), so a third freebie needs a plan change or a different delivery approach.
 
 ---
 
 ## Platform-Specific Notes
 
 **Instagram:**
-- Bio: "Helping course creators build outcome-driven content that transforms learners | Free live session [date] → engagingcourses.com"
-- Bio link: engagingcourses.com (default) / engagingcourses.com/freebies.html (freebie swap days)
+- Bio: "Helping course creators build outcome-driven content that transforms learners | Free live session [date] → engagingcourses.com" — **UPDATE NEEDED: remove "Free live session [date]"** (suggested direction: point to the free freebies instead, e.g. "Free course diagnostics ↓" — Aaron to approve exact wording)
+- Bio link: engagingcourses.com (default) / engagingcourses.com/freebies/ (freebie swap days)
 - Scheduling: Meta Business Suite (free) — also auto-crossposts to Facebook
 - Alt text: write manually on every post — do not use auto-generated
 - Pin best-performing video to top of profile once identified
@@ -236,50 +232,31 @@ Tim's idea: use freebie-specific posts to test which pain points resonate most w
 
 **Posting frequency:**
 - Standard: 1 per day
-- Final week before event: 2 per day — morning (9-10am ET) and evening (7-8pm ET) minimum 6 hours apart
+- Optional push periods: 2 per day — morning (9-10am ET) and evening (7-8pm ET), minimum 6 hours apart. (This used to be the "final week before the event" rhythm.)
 - Maximum: 2 per day — beyond this algorithm treats account as spam-poster
 
 **Follow-back policy:** Do not follow back automatically. Occasionally follow clearly relevant accounts (course creators, instructional designers) to reinforce niche classification. Reply to comments instead.
 
 ---
 
-## Email Campaign (Planned — Not Yet Built)
+## Email Campaign
 
-To be set up in MailerLite before September 7 event.
+**The planned 5-email webinar sequence (welcome/confirmation, day-before, day-of, replay, follow-up) is CANCELLED** along with the webinar.
 
-**Email 1 — Immediate Welcome/Confirmation**
-Trigger: signup via TM3AOT or webinar registration. Send: immediately.
-Content: Thank you, webinar link, what to expect, freebies page link as bonus.
-
-**Email 2 — Day-Before Reminder**
-Trigger: 24 hours before event. Send: September 6, 11am ET.
-Content: Brief reminder, restate takeaways, join link prominent.
-
-**Email 3 — Day-Of Reminder**
-Trigger: morning of event. Send: September 7, 9am ET.
-Content: We are live in 2 hours. Link. Done.
-
-**Email 4 — Post-Event Replay/Thank You**
-Trigger: manually sent September 7, 2-3pm ET.
-Content: Replay link, freebies page, Academy/Skool link. One clear next step.
-
-**Email 5 — Follow-Up Value Email**
-Trigger: 3-5 days post event. Send: September 10-12.
-Content: One actionable insight from webinar expanded. Soft CTA to Academy.
-
-**Note:** Tim has additional ideas for email sequences — reminder emails, "you just missed us," "see you next time." Full sequence to be built in a dedicated session before September.
+**Still worth building (to be designed in a dedicated session):** a short welcome/nurture sequence for people who sign up through the freebie forms or the homepage form, ending in a soft invitation to the Academy. Check existing MailerLite automations first — any tied to webinar signup or the retired `Vs4wxq` form should be retired or repurposed. The free plan allows 3 automations.
 
 ---
 
 ## Key Decisions Made (Do Not Revisit Without Good Reason)
 
+- **No webinars (Oct 8, 2026)** — do not mention, advertise or link to webinars in captions, bios or bio links
 - X/Twitter deprioritized — short video gets no discovery there
 - Bluesky not evaluated — defer
 - YouTube for long-form only — 2.5 min intro video lives there, not on IG/TikTok
 - Facebook via auto-crosspost only — no separate content creation
 - EngineMailer evaluated and rejected — stay on MailerLite
-- No paid ads before September 7 — organic only until post-event data exists
+- No paid ads so far — organic only (July decision tied to the Sept 7 event date; revisit with Aaron and Tim when there is real data)
 - No follow-back policy for brand accounts
-- Captions end with standard tagline, then webinar line (pre-event only), then hashtags
+- Captions end with standard tagline, then hashtags (the webinar line is retired)
 - Alt text: plain descriptive language, not marketing copy
 - TikTok bio needs updating to problem-focused language within 80 chars

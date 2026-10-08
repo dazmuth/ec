@@ -2,76 +2,72 @@
 > Running list of all published blog posts.
 > Update this file whenever a new post is added or an existing post is edited.
 > Upload alongside EC-CONTEXT.md at the start of any Claude session involving blog work.
+> Last updated: October 8, 2026
 
 ---
 
 ## Published Posts
 
-| # | Title | Filename | Tag | Date | Status |
-|---|---|---|---|---|---|
-| 1 | Why Your Online Course Isn't Selling — And It Has Nothing to Do With Your Content | `blog/why-your-course-isnt-selling.html` | Course Design | July 2025 | Published |
-| 2 | The Difference Between Teaching Information and Transforming Learners | `blog/teaching-information-vs-transforming-learners.html` | Instructional Design | July 2025 | Published |
-| 3 | Why We Use Illustrated Storytelling to Teach Course Design — And Why It Works | `blog/illustrated-storytelling-in-course-design.html` | Content Strategy | July 2025 | Published |
-| 4 | Join Us Live August 2: A Free Session on Building Courses That Transform | `blog/join-us-live-august-2.html` | Live Event | July 2025 | Featured on blog index |
+Every post lives in its own folder as `index.html`, so the URL has no `.html`.
+
+| # | Title | Repo path | URL | Tag | Date | Status |
+|---|---|---|---|---|---|---|
+| 1 | Why Your Online Course Isn't Selling — And It Has Nothing to Do With Your Content | `blog/why-your-course-isnt-selling/index.html` | /blog/why-your-course-isnt-selling/ | Course Design | May 2026 | Published |
+| 2 | The Difference Between Teaching Information and Transforming Learners | `blog/teaching-information-vs-transforming-learners/index.html` | /blog/teaching-information-vs-transforming-learners/ | Instructional Design | June 2026 | Published |
+| 3 | Why We Use Illustrated Storytelling to Teach Course Design — And Why It Works | `blog/illustrated-storytelling-in-course-design/index.html` | /blog/illustrated-storytelling-in-course-design/ | Content Strategy | July 2026 | Published |
+
+**Removed:**
+- Former Post 4, "Join Us Live August 2" (`blog/join-us-live-august-2.html`) — deleted earlier; its content moved to the `/webinar/` page.
+- The blog index's "Join Us Live October 18" featured card — removed Oct 8, 2026 along with the whole webinar program (see EC-CONTEXT.md, "Webinar Removal").
 
 ---
 
 ## Post Details
 
 ### Post 1 — Why Your Online Course Isn't Selling
-- **File:** `blog/why-your-course-isnt-selling.html`
-- **URL:** https://engagingcourses.com/blog/why-your-course-isnt-selling.html
+- **URL:** https://engagingcourses.com/blog/why-your-course-isnt-selling/
 - **Summary:** Addresses the core pain point — course creators with good content that isn't selling. Argues the problem is delivery not expertise. Introduces outcome-driven design concept. CTA → Skool Academy.
 - **Key phrases:** outcome-driven, transformation, delivery vs. content, information trap
 - **CTA:** Explore the Academy → Skool
 
 ### Post 2 — Teaching Information vs. Transforming Learners
-- **File:** `blog/teaching-information-vs-transforming-learners.html`
-- **URL:** https://engagingcourses.com/blog/teaching-information-vs-transforming-learners.html
+- **URL:** https://engagingcourses.com/blog/teaching-information-vs-transforming-learners/
 - **Summary:** Makes the explicit philosophical argument differentiating ECA from superficial course platforms. Includes a side-by-side comparison table. Positions outcome-driven design as a learnable skill.
 - **Key phrases:** transform vs. inform, outcome-driven, capability vs. comprehension, learnable skill
 - **Special elements:** Comparison table (6 rows, information-based vs transformation-based)
 - **CTA:** Join the Academy → Skool
 
 ### Post 3 — Illustrated Storytelling in Course Design
-- **File:** `blog/illustrated-storytelling-in-course-design.html`
-- **URL:** https://engagingcourses.com/blog/illustrated-storytelling-in-course-design.html
+- **URL:** https://engagingcourses.com/blog/illustrated-storytelling-in-course-design/
 - **Summary:** Explains the pedagogical reasoning behind ECA's animated illustrated character approach. Argues that the medium models the message — using engaging content to teach engagement. Includes practical takeaways for any course creator.
 - **Key phrases:** illustrated storytelling, cognitive load, animation as teaching tool, short-form clarity, medium models the message
 - **Special elements:** Highlight box callout, pull quote
 - **CTA:** See the method in action → Skool
 
-### Post 4 — Join Us Live August 2 (Featured)
-- **File:** `blog/join-us-live-august-2.html`
-- **URL:** https://engagingcourses.com/blog/join-us-live-august-2.html
-- **Summary:** Pre-event promotional post for the August 2, 2026 live session. Covers what will be taught, who it's for, and drives email signups via embedded MailerLite form (TM3AOT).
-- **Event details:** Sunday August 2, 2026 · 11am ET · Free · Online
-- **Special elements:** Event details box, bullet list of what will be covered, MailerLite TM3AOT form embedded at bottom
-- **CTA:** MailerLite signup form (not Skool link)
-- **Note:** This post should be archived or replaced after August 2, 2026
-
 ---
 
-## Blog Index Page (`blog.html`)
+## Blog Index Page (`blog/index.html`, URL /blog/)
 
-- Featured post: Post 4 (Join Us Live August 2) — shown as large card with "Featured" badge
-- Grid: Posts 1, 2, 3 in three-column layout
-- When adding new posts: add card to grid, promote most important as featured if relevant
-- After August 2, 2026: unfeature Post 4, replace featured slot with newest relevant post
+- Layout: page header, then the three posts in a three-column grid (one column on mobile). There is currently **no featured card**.
+- The Home page's blog preview shows the same three cards, word for word, each linking directly to its post.
+- When adding a new post: add its card to the grid (and to the Home preview if it should appear there), add a folder under `blog/`, add it to `sitemap.xml`, and add a row to this file.
+- If a featured slot is wanted again, bring back a `.featured-post` card — but do not use it for webinar or live-event promotion unless webinars are revived.
 
 ---
 
 ## Post Template Notes
 
 All blog posts use identical structure:
-- Same nav and footer as rest of site
-- Asset paths use `../assets/images/` (one level up from /blog/ folder)
+- Same nav and footer as the rest of the site (nav has no Webinars item)
+- Asset paths are root-relative (`/assets/images/...`)
 - Schema.org BlogPosting JSON-LD in head
-- Back link: `← Back to blog` → `/blog.html`
+- GA4 tag in head, same as every page
+- Back link: `← Back to blog` → `/blog/`
 - Article tag (category label in Dusty color)
 - Pull quote style: left border Dusty, white background
 - CTA box: dark olive background at bottom of article
-- Date format: "Month YYYY" (e.g. "July 2025")
+- Date format: "Month YYYY" (e.g. "July 2026")
+- Deliver edited posts as `index-blog-[post-slug].html` (see EC-CONTEXT.md, GitHub Workflow)
 
 ---
 
@@ -84,4 +80,3 @@ These topics align with the brand voice and have not yet been written:
 - "How to write a learning objective that actually means something"
 - "Why your course needs a villain (and how to find yours)"
 - "The anatomy of a lesson that creates real skill"
-- Post-event recap: "What we learned from our August 2 live session"

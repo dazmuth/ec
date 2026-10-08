@@ -5,7 +5,50 @@
 
 ---
 
+## October 8, 2026 — Webinar Removal, Site State Refresh
+
+**Decision:** Aaron decided there will be no webinars, or at least none advertised. The planned October 18, 2026 live session is cancelled. If webinars are revived later, Aaron and Claude will rebuild the pages from scratch.
+
+**Removed from the site:**
+- Countdown/"Sign Up for Free Webinar" banner on Home, Freebies and Blog, plus its three popups (choice, signup with freebie picker, Zoom link) and their CSS/JS
+- `/webinar/` page and the "Webinars" nav item on all pages
+- `/webinar/` entry in `sitemap.xml`
+- Blog featured card "Join Us Live October 18…"
+- "upcoming live event info" wording in the homepage email-capture section (now "free resources and sample content")
+
+**Kept:** Freebies page email-gated download popups; homepage inline TM3AOT signup.
+
+**Bug caught during testing:** the Freebies page shares `openModal`/`closeModal` helpers with the removed popups; they were restored so the download popups still work. All 6 page types were checked in a browser (no console errors, banner gone, Freebies popup opens and closes with Escape).
+
+**Files delivered (9):** home, about, contact, freebies, blog index, 3 blog posts, sitemap. Aaron uploads each into its folder as `index.html` and **deletes the `webinar/` folder** from the GitHub repo.
+
+**New working rule:** delivered pages are named by page (`index-home.html`, `index-blog.html`, `index-blog-[post-slug].html` …) with a table of where each goes, so downloads don't collide as `index(1).html`. Recorded in EC-CONTEXT.md.
+
+**Docs updated this session:** EC-CONTEXT.md (full refresh), EC-BLOG-INDEX.md (full refresh), EC-SOCIAL.md (webinar lines/CTAs retired), this changelog.
+
+**Site changes made between the July sessions and today (summarized so this log catches up):**
+- Header/footer unified across all pages; simplified footer; Aaron/Tim order swapped on About with a new Aaron bio
+- Clean URLs sitewide (folder + `index.html`); Home blog cards match the Blog page and link straight to each post; blog posts dated May / June / July 2026
+- Webinar page, banner and popups built, date moved Aug 2 → Sept 7 → Oct 18, then removed today
+- Freebies page: real PDFs with descriptions; email gate; split into two forms (`Fwa2AK` Scorecard, `yYD8Ks` Autopsy); real download URLs kept out of page HTML; `Vs4wxq` retired
+- GA4 (`G-NSXM6TD1ZR`) installed on all pages; UTM-tagged bio link in use
+- Mobile fixes: popups cap height and scroll with a sticky close button; Request Demo/Contact dropdowns become centered fixed popups on phones
+- MailerLite: SPF record merged for IONOS + MailerLite; legacy `V8INNU` deleted
+- GitHub Releases PDF filenames use hyphens (an underscore mismatch once caused a 404)
+
+**Open items:**
+- Remove webinar wording from Instagram/TikTok bios and any scheduled captions; update the campaign doc (EC-Campaign-2026-v4)
+- Review MailerLite automations tied to the webinar signup and the retired `Vs4wxq` form
+- Check the repo for orphaned old flat files (`about.html`, `freebies.html`, `blog.html`, …) and update any social bio link that still points to `/freebies.html`
+- Freebie delivery is still bypassable via the public GitHub Releases page; option to deliver by MailerLite email depends on free-plan limits (3 forms, 3 automations, 1 digital product; all 3 forms are in use)
+- No GA4 custom events for freebie signups/downloads yet
+- Replace the TikTok bio (needs problem-focused text within 80 characters)
+
+---
+
 ## July 2026 — Session 2 (Social Media Campaign Session)
+
+> Historical entry. The webinar plans below (Aug 2, then Sept 7, then Oct 18) were cancelled on October 8, 2026.
 
 This was a very long session focused entirely on social media strategy, campaign execution, and content optimization leading up to the originally planned August 2 webinar. Webinar was subsequently moved to September 7, 2026.
 
